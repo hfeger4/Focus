@@ -32,10 +32,10 @@
       - Tag
     * Photo
 
-**NewNoteContainer**
- - NewNote
+**NewCommentContainer**
+ - NewComment
   - RTETools
-  - NewNoteButton
+  - NewCommentButton
 
 **Search**
 
