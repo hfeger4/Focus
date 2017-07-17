@@ -34,8 +34,17 @@
 - `POST /api/albums`
 - `GET /api/albums/:id`
 - `DELETE /api/albums/:id`
-- `GET /api/albums/:id/notes`
+- `GET /api/albums/:id/photos`
   - index of all photos for an album
+
+### Comments
+
+- `GET /api/comments`
+- `POST /api/comments`
+- `GET /api/comments/:id`
+- `PATCH /api/comments/:id`
+- `DELETE /api/comments/:id`
+- `GET /api/comments/:id/photos`
 
 ### Tags
 
