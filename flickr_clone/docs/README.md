@@ -8,8 +8,8 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Notes
-- [ ] Notebooks for organizing notes
+- [ ] Photos
+- [ ] Albums for Organizing photos
 - [ ] Tags
 - [ ] Rich Text Editing
 - [ ] Infinite Scroll
@@ -32,11 +32,11 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 
 **Objective:** Photos can be uploaded, viewed, and destroyed through the API.
 
-### Phase 3: Albums (1 days)
+### Phase 3: Albums (1 day)
 
 **Objective:** Photos belong to Albums that can be created, viewed, edited and destroyed through the API.
 
-### Phase 4: Tags (1 day)
+### Phase 4: Tags (2 days)
 
 **Objective:** Photos can be tagged with multiple tags, and tags are searchable.
 
@@ -44,7 +44,7 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 
 **Objective:** Comments belong to a photo and can be created, viewed, and destroyed through the API.
 
-### Phase 6: Finalize CSS (2 days)
+### Phase 6: Finalize CSS (1 day)
 
 **Objective:** Complete styling and add thumbnails for photo and album galleries.
 
