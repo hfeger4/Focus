@@ -44,7 +44,7 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 
 **Objective:** Comments belong to a photo and can be created, viewed, and destroyed through the API.
 
-### Phase 6: - Finalize CSS (2 days)
+### Phase 6: Finalize CSS (2 days)
 
 **Objective:** Complete styling and add thumbnails for photo and album galleries.
 
