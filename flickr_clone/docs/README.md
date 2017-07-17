@@ -12,38 +12,40 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 - [ ] Tags
 - [ ] Rich Text Editing
 - [ ] Infinite Scroll
-- [ ] Production README [sample](docs/production_readme.md)
+- [ ] Production README
 
 ## Design Docs
-[DB Schema](./schema.md)
+* [DB Schema](./schema.md)
+* [Sample State](./sample_state.md)
+* [Component Hierarchy](./component_hierarchy.md)
 
 ## Implementation Timeline
 
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-#### Objective: Functioning rails project with front-end Authentication
+**Objective:** Functioning rails project with front-end Authentication
 
 ### Phase 2: Photos Model, API, and components (2 days)
 
-#### Objective: Photos can be uploaded, viewed and deleted through the API.
+**Objective:** Photos can be uploaded, viewed, and destroyed through the API.
 
 ### Phase 3: Albums (1 days)
 
-#### Objective: Photos belong to Albums that can be created, viewed and destroyed through the API.
+**Objective:** Photos belong to Albums that can be created, viewed, edited and destroyed through the API.
 
-### Phase 4: Comments (1 day)
+### Phase 4: Tags (1 day)
 
-#### Objective: Comments belong to Photo that can be created, viewed and destroyed through the API.
+**Objective:** Photos can be tagged with multiple tags, and tags are searchable.
 
-### Phase 5: Tags & Search (2 days)
+### Phase 5: Comments (1 day)
 
-#### Objective: Photos can be tagged with multiple tags, and tags are searchable.
+**Objective:** Comments belong to a photo and can be created, viewed, and destroyed through the API.
 
-### Phase 6: Final Styling (1 day)
+### Phase 6: - Finalize CSS (2 days)
 
-#### Objective: Photo and Album galleries feature thumbnails
+**Objective:** Complete styling and add thumbnails for photo and album galleries.
 
-### Bonus Features:
-#### Infinite scroll in search results
-#### Favorites
-#### Follows
+### Bonus Features (TBD)
+- [ ] Infinite scrolling in photo index.
+- [ ] Allow users to follow other uses.
+- [ ] Allow users to set favorite pictures.

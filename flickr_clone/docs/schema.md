@@ -5,7 +5,6 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 username        | string    | not null, indexed, unique
-email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 
@@ -14,9 +13,9 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 title       | string    | not null
-description | text      | not null
-url         | string    | not null
-author_id   | integer   | not null, foreign key (references users), indexed
+body        | text      | not null
+image_url   | string    | not null
+user_id     | integer   | not null, foreign key (references users), indexed
 album_id    | integer   | not null, foreign key (references album), indexed
 
 
@@ -24,20 +23,28 @@ album_id    | integer   | not null, foreign key (references album), indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users), indexed
+user_id     | integer   | not null, foreign key (references users), indexed
 title       | string    | not null
-description | string    |
+body        | string    |
 
 ## comments
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 title       | string    | not null
-description | text      | not null
-author_id   | integer   | not null, foreign key (references users), indexed
+body        | text      | not null
+photo_id    | integer   | not null
+user_id     | integer   | not null, foreign key (references users), indexed
 
 ## tags
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
+
+## taggings
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+photo_id    | integer   | not null, foreign key (references photos), indexed, unique [tag_id]
+tag_id      | integer   | not null, foreign key (references tags), indexed
