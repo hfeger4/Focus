@@ -3,42 +3,42 @@
   <img src="./wireframes/Create Album.png" />
 </kbd>
 
-#Edit Photo
+# Edit Photo
 <kbd>
   <img src="./wireframes/Edit Photo.png" />
 </kbd>
 
-#Home Screen
+# Home Screen
 <kbd>
   <img src="./wireframes/Home Screen.png" />
 </kbd>
 
-#HomePage
+# HomePage
 <kbd>
   <img src="./wireframes/homepage.png" />
 </kbd>
 
-#Photo Search
+# Photo Search
 <kbd>
   <img src="./wireframes/Photo Search_ Album Gallery.png" />
 </kbd>
 
-#Sign In
+# Sign In
 <kbd>
   <img src="./wireframes/Sign In.png" />
 </kbd>
 
-#Upload Photo
+# Upload Photo
 <kbd>
   <img src="./wireframes/Upload Photo.png" />
 </kbd>
 
-#User Photos
+# User Photos
 <kbd>
   <img src="./wireframes/User Photos Gallery.png" />
 </kbd>
 
-#View Photo
+# View Photo
 <kbd>
   <img src="./wireframes/View Photo.png" />
 </kbd>
