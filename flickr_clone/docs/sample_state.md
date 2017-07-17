@@ -7,13 +7,13 @@
   forms: {
     signUp: {errors: []},
     logIn: {errors: []},
-    createNote: {errors: ["body can't be blank"]}
+    uploadPhoto: {errors: ["body can't be blank"]}
   },
   photos: {
     1: {
       title: "Sample State",
-      description: "is useful to plan",
-      author_id: 1,
+      body: "is useful to plan",
+      user_id: 1,
       album_id: 1
       tags: {
         1: {
@@ -26,8 +26,8 @@
   album: {
     1: {
       title: "Redux",
-      author_id: 1,
-      description: "is cool"
+      user_id: 1,
+      body: "is cool"
     }
   }
 }
