@@ -7,7 +7,7 @@
   forms: {
     signUp: {errors: []},
     logIn: {errors: []},
-    uploadPhoto: {errors: ["body can't be blank"]}
+    uploadPhoto: {errors: ["title can't be blank"]}
   },
   photos: {
     1: {
