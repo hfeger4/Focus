@@ -16,7 +16,7 @@ import SessionFormContainer from './session_form/session_form_container';
 const App = () => (
   <div>
     <header>
-      <h1>FocusTHIS</h1>
+      <h1>Welcome to Focus</h1>
       <GreetingContainer />
     </header>
 
