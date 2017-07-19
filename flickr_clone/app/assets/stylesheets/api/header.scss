@@ -2,23 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ceb8a2;
+  background-color: #202020;
   font-size: 20px;
   opacity: .9;
   font-family: serif;
+  color: gray;
 }
 
 .login-signup {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   padding: 5px;
   margin: 5px;
 }
 
 .auth-buttons {
-  padding: 3px;
-  margin: 3px;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  opacity: .8;
 }
 
 .auth-buttons:hover{
@@ -30,12 +34,11 @@ font-weight:bold;
 .logo-text {
   font-size: 30px;
   padding: 5px;
+  margin: 5px;
+  color: white;
+  opacity: .8;
 }
 
 .logo-text:hover{
   font-weight: bold;
-}
-
-.demo-button {
-  font-size: 25px;
 }

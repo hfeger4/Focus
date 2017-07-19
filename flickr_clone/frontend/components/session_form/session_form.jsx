@@ -64,10 +64,12 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         <div className="login-form">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h1>Welcome to Focus!</h1>
+          <h1>Welcome to Focus</h1>
           <br/>
+          <div className="errors">
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
+          </div>
           <div className="login-form">
             <br/>
             <label>
@@ -90,9 +92,9 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input className="auth-buttons" type="submit" value="Submit" />
+            <input className="submit-button" type="submit" value="Submit" />
           </div>
-          <input className="demo-button" type="submit" value="Demo Login!" onClick={this.handleGuestSignIn} />
+          <input className="demo-button" type="submit" value="Guest Login" onClick={this.handleGuestSignIn} />
         </form>
         </div>
       </div>

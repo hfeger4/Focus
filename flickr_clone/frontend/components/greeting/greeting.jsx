@@ -7,7 +7,7 @@ const sessionLinks = () => (
     <div className="login-signup">
       <Link className="auth-buttons" to="/login">Login</Link>
       <br />
-      <Link className="auth-buttons" to="/signup">Sign up!</Link>
+      <Link className="auth-buttons" to="/signup">Sign up</Link>
     </div>
   </nav>
 );
@@ -16,7 +16,7 @@ const personalGreeting = (currentUser, logout) => (
 	<nav className="header">
     <Link to='/'><h1 className='logo-text'>Focus</h1></Link>
     <h2>Welcome, {currentUser.username}!</h2>
-    <button className="login-signup" onClick={logout}>Log Out</button>
+    <button className="auth-buttons" onClick={logout}>Log Out</button>
 	</nav>
 );
 

@@ -20,55 +20,11 @@
  }
 
  h1 {
-   font-size: 30px;
- }
-
- .login-form-box {
-  border: 3px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 5px;
-  opacity: 50%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: white;
-  opacity: 0.6;
-  font-size: 20px;
- }
-
- .login-form-container {
-   display: flex;
-   justify-content: center;
-   height: 100%;
-   align-items: center;
+   font-size: 35px;
  }
 
  .main-body {
    height: 100%;
    background-position: center center;
    background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_1812/v1500488349/wood-night-camera-vintage_icnhpi.jpg")
- }
-
- .login-form {
-   min-height: 150px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   width: 300px;
- }
-
- input.login-input {
-   display: flex;
-   align-items: center;
-   text-align: center;
-   border: 3px solid black;
-   border-radius: 20px;
- }
-
- .login-input::placeholder {
-   color: black;
-
  }
