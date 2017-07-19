@@ -28,3 +28,14 @@
    background-position: center center;
    background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_1812/v1500488349/wood-night-camera-vintage_icnhpi.jpg")
  }
+
+ .footer {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: space-between;
+   color: white;
+   opacity: .6;
+   background-color: #202020;
+   padding: 10px;
+ }

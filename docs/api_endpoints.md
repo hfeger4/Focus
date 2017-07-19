@@ -21,8 +21,8 @@
 ### Photos
 
 - `GET /api/photos`
-  - Notes index/search
-  - accepts `tag_name` query param to list notes by tag
+  - Photos index/search
+  - accepts `tag_name` query param to list photos by tag
 - `POST /api/photos`
 - `GET /api/photos/:id`
 - `PATCH /api/photos/:id`

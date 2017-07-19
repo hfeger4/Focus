@@ -31,7 +31,23 @@ font-weight:bold;
 
 }
 
+.sign-up-button {
+  padding: 5px;
+  margin: 10px;
+  color: black;
+  background-color: white;
+  opacity: .8;
+  border: 1px solid black;
+  border-radius: 5px;
+
+}
+
+.sign-up-button:hover{
+  color: gray;
+}
+
 .logo-text {
+  font-family: fantasy;
   font-size: 30px;
   padding: 5px;
   margin: 10px;
