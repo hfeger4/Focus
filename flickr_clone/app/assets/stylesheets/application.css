@@ -19,6 +19,10 @@
    background-color: #E1F4FF;
  }
 
+ h1 {
+   font-size: 30px;
+ }
+
  .login-form-box {
   border: 3px solid black;
   display: flex;
