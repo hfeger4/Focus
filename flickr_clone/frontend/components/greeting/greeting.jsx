@@ -5,9 +5,9 @@ const sessionLinks = () => (
   <nav className="header">
     <Link to='/' className='logo-text'><h1>Focus Home Icon</h1></Link>
     <div className="login-signup">
-      <Link to="/login">Login</Link>
+      <Link className="auth-buttons" to="/login">Login</Link>
       <br />
-      <Link to="/signup">Sign up!</Link>
+      <Link className="auth-buttons" to="/signup">Sign up!</Link>
     </div>
   </nav>
 );

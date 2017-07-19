@@ -25,13 +25,47 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 300px;
   padding: 5px;
   opacity: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+  opacity: 0.6;
+  font-size: 20px;
  }
 
  .login-form-container {
    display: flex;
    justify-content: center;
+   height: 100%;
+   align-items: center;
+   background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_1492/v1500487459/pexels-photo-502387_hllund.jpg")
+ }
+
+ .main-body {
+   height: 100%;
+   background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_1492/v1500487459/pexels-photo-502387_hllund.jpg")
+ 
+ }
+
+ .login-form {
+   min-height: 150px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   width: 300px;
+ }
+
+ input.login-input {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   border: 3px solid black;
+   border-radius: 20px;
+ }
+
+ .login-input::placeholder {
+   color: black;
 
  }
