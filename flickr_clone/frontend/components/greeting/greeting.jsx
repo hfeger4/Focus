@@ -13,10 +13,11 @@ const sessionLinks = () => (
 );
 
 const personalGreeting = (currentUser, logout) => (
-	<hgroup>
+	<nav className="header">
+    <Link to='/' className='logo-text'><h1>Focus Home Icon</h1></Link>
     <h2>Hi there, {currentUser.username}!</h2>
-    <button onClick={logout}>Log Out</button>
-	</hgroup>
+    <button className="login-signup" onClick={logout}>Log Out</button>
+	</nav>
 );
 
 const Greeting = ({ currentUser, logout }) => (

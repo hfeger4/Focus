@@ -39,13 +39,12 @@
    justify-content: center;
    height: 100%;
    align-items: center;
-   background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_1492/v1500487459/pexels-photo-502387_hllund.jpg")
  }
 
  .main-body {
    height: 100%;
-   background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_1492/v1500487459/pexels-photo-502387_hllund.jpg")
- 
+   background-position: center center;
+   background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_1812/v1500488349/wood-night-camera-vintage_icnhpi.jpg")
  }
 
  .login-form {
