@@ -32,7 +32,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor'
 gem 'better_errors'
 gem 'binding_of_caller'
-gem 'pry-rails'
 gem 'annotate'
 gem 'figaro'
 # Use Capistrano for deployment
@@ -41,6 +40,7 @@ gem 'figaro'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
 end
 
 group :development do
