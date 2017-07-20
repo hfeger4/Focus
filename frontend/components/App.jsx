@@ -19,6 +19,24 @@ const App = () => (
     </header>
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
+    <div className="footer">
+      <div className="footer-icons">
+        <Link to='/'><i className="fa fa-camera-retro fa-2x"></i></Link>
+      </div>
+      <div className="footer-icons">
+        <i className="fa fa-home fa-2x" aria-hidden="true"></i>
+      </div>
+      <div className="footer-icons">
+        <a href="https://github.com/hfeger4">
+        <i className="fa fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div className="footer-icons">
+        <a href="https://linkedin.com/in/howardfeger4">
+        <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
   </div>
 );
 

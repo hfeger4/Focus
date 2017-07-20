@@ -32,14 +32,24 @@
   background-attachment: scroll;
   background-position: center;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
  }
 
  .footer {
    display: flex;
-   align-items: center;
+   justify-content: center;
+   align-items: flex-end;
    flex-direction: row;
-   justify-content: space-between;
+   font-size: 20px;
+   font-family: 'Zilla Slab', serif;
    color: white;
-   background-color: #202020;
-   padding: 10px;
+   opacity: .7;
+   background-color: rgba(0, 0, 0, .2)
+ }
+
+ .footer-icons {
+   margin-right: 20px;
+   margin-left: 20px;
  }
