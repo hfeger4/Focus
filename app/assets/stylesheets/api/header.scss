@@ -4,9 +4,10 @@
   align-items: center;
   background-color: #202020;
   font-size: 20px;
-  opacity: .9;
+  opacity: .6;
   font-family: serif;
   color: gray;
+  font-family: 'Zilla Slab', serif;
 }
 
 .login-signup {
@@ -18,11 +19,17 @@
   margin: 5px;
 }
 
+.icon-focus{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
 .auth-buttons {
   padding: 5px;
   margin: 5px;
   color: white;
-  opacity: .8;
 }
 
 .auth-buttons:hover{
@@ -35,7 +42,6 @@ font-weight:bold;
   padding: 5px;
   margin: 5px;
   color: white;
-  opacity: .8;
 }
 
 .login-button:hover{
@@ -43,11 +49,10 @@ font-weight:bold;
 }
 
 .sign-up-button {
-  padding: 5px;
+  padding: 8px;
   margin: 10px;
   color: black;
   background-color: white;
-  opacity: .8;
   border: 1px solid black;
   border-radius: 5px;
 
@@ -63,7 +68,6 @@ font-weight:bold;
   padding: 5px;
   margin: 10px;
   color: white;
-  opacity: .8;
 }
 
 .logo-text:hover{
