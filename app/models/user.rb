@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :photos
+
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
 
