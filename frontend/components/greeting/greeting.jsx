@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const sessionLinks = () => (
   <nav className="header">
     <div className="icon-focus">
-      <Link to='/'><h1 className='logo-text'>Focus</h1></Link>
+      <Link to='/'><h1 className='logo-text'>focus</h1></Link>
       <Link to='/'><i className="fa fa-camera-retro fa-2x"></i></Link>
     </div>
     <div className="login-signup">
-      <Link className="login-button" to="/login">Login</Link>
+      <Link className="login-button" to="/login">Log in</Link>
       <br />
       <Link className="sign-up-button" to="/signup">Sign up</Link>
     </div>
