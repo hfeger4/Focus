@@ -32,9 +32,7 @@ const App = () => (
         </a>
       </div>
       <div className="footer-icons">
-        <a href="https://linkedin.com/in/howardfeger4">
         <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-        </a>
       </div>
     </div>
   </div>
