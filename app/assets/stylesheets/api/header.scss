@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #202020;
-  font-size: 20px;
+  font-size: 17px;
   opacity: .6;
   font-family: serif;
   color: gray;
@@ -55,6 +55,11 @@ font-weight:bold;
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
+  width: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -66,7 +71,7 @@ font-weight:bold;
   font-family: fantasy;
   font-size: 30px;
   padding: 5px;
-  margin: 10px;
+  margin-left: 50px;
   color: white;
 }
 

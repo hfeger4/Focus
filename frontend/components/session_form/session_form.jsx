@@ -124,7 +124,7 @@ class SessionForm extends React.Component {
           <br/>
           <div className="errors">
           Please {this.props.formType}
-          {this.renderErrors()}
+          <div className="errors-exact">{this.renderErrors()}</div>
           </div>
           <div className="login-form">
             <br/>
