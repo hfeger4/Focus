@@ -159,7 +159,7 @@ class SessionForm extends React.Component {
             <br/>
             <input className="submit-button" type="submit" value="Submit" />
           </div>
-          <input className="demo-button" type="submit" value="Guest Login" onClick={this.handleGuestSignIn} />
+          <input className="submit-button" type="submit" value="Guest Login" onClick={this.handleGuestSignIn} />
            <div className="instead">{this.navLink()}</div>
         </form>
         </div>
