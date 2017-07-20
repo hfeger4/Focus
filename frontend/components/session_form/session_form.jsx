@@ -46,10 +46,12 @@ class SessionForm extends React.Component {
   }
 
   openModal() {
+    this.props.clearErrors();
     this.setState({modalIsOpen: true});
   }
 
   closeModal() {
+   this.props.clearErrors();
    this.setState({modalIsOpen: false});
    this.props.history.push('/');
  }
@@ -74,13 +76,22 @@ class SessionForm extends React.Component {
 
   handleGuestSignIn(e){
     e.preventDefault();
-    const user = {
-      username: 'Guest',
-      password: 'password'
-    };
-    this.props.login({user});
-    // this.props.history.push("/");
-  }
+      let name = "Guest";
+      let password = "password";
+      for (let i = 0; i < name.length; i++) {
+        setTimeout(() => this.setState({
+          username: name.slice(0, i + 1)}), (i * 80));
+      }
+      for (let j = 0; j < password.length; j++) {
+        setTimeout(() => this.setState({
+          password: password.slice(0, j + 1)}), ((j + 5) * 80));
+      }
+      const user = {
+        username: 'Guest',
+        password: 'password'
+      };
+      setTimeout(() => this.props.login({user}), 1500);
+    }
 
   navLink() {
     if (this.props.formType === 'login') {
