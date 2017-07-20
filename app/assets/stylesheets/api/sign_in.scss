@@ -43,7 +43,7 @@ input.login-input {
 
 .submit-button {
   color: white;
-  background-color: green;
+  background-color: #1C27A6;
   border: 1px solid #205421;
   border-radius: 1px;
   padding: 0 11px;
@@ -55,7 +55,7 @@ input.login-input {
 }
 
 .submit-button:hover{
-  background-color: #205421;
+  background-color: #202DBF;
 }
 
 .errors{
@@ -63,12 +63,12 @@ input.login-input {
 }
 
 .demo-button:hover{
-  background-color: #205421;
+  background-color: #202DBF;
 }
 
 .demo-button {
   color: white;
-  background-color: green;
+  background-color: #1C27A6;
   border: 1px solid #205421;
   border-radius: 1px;
   padding: 0 11px;
@@ -80,5 +80,18 @@ input.login-input {
 }
 
 .instead{
+  padding: 5px;
+}
+
+.instead-button{
+  font-weight: bold;
+}
+
+.instead-button:hover{
+  color: blue;
+}
+
+.choice{
+  font-size: 15px;
   padding: 5px;
 }

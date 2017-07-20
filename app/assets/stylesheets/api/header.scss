@@ -31,6 +31,17 @@ font-weight:bold;
 
 }
 
+.login-button{
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  opacity: .8;
+}
+
+.login-button:hover{
+  color: gray;
+}
+
 .sign-up-button {
   padding: 5px;
   margin: 10px;

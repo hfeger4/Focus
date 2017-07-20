@@ -14,7 +14,7 @@ const customStyles = {
 },
 content : {
   position                   : 'fixed',
-  height: "350px",
+  height: "400px",
   width: "250px",
   top                        : '50%',
   left                       : '50%',
@@ -84,9 +84,9 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead</Link>;
+      return <div className="choice">New to Focus?<Link to="/signup" className="instead-button"> Sign up</Link></div>;
     } else {
-      return <Link to="/login">log in instead</Link>;
+      return <div className="choice">Already have an account?<Link to="/login" className="instead-button"> Log in</Link></div>;
     }
   }
 
