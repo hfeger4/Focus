@@ -17,13 +17,14 @@
 .my-gallery-class {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 
 .masonry{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-attachment: fixed;
 }
 
 .single-photo {
@@ -33,5 +34,5 @@
   flex-direction: column;
   width: 300px;
   margin: 20px;
-  border: 2px solid black;
+  border: 1px solid black;
 }

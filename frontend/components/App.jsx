@@ -18,8 +18,7 @@ const App = () => (
     <header>
       <GreetingContainer />
     </header>
-    <Route path="/photos" component={PhotosIndexContainer} />
-
+    <ProtectedRoute path="/photos" component={PhotosIndexContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>
