@@ -14,6 +14,7 @@
  */
 
 @import './reset/reset.scss';
+@import '.application.html.erb';
 @import './api/main.scss';
 @import './api/header.scss';
 @import './api/sign_in.scss';

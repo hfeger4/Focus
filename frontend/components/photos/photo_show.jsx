@@ -42,6 +42,12 @@ class PhotoShow extends React.Component{
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.deletePhoto = this.deletePhoto.bind(this);
+  }
+
+  handleSubmit(){
+
   }
 
   openModal() {
@@ -64,9 +70,11 @@ class PhotoShow extends React.Component{
         onRequestClose={this.closeModal}
         style={customStyles}
         contentLabel="Example Modal">
-
-        <div>
-          <img src={ photo.image_url }/>
+        <div className="whole-photo-modal">
+          <div className="photo-modal">
+            <img src={ photo.image_url }/>
+          </div>
+          <div className="submit-button"></div>
         </div>
       </Modal>
     );
