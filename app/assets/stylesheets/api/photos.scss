@@ -1,3 +1,37 @@
 // Place all the styles related to the api/photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .photos-index{
+//   display: flex;
+//   justify-content: center;
+// }
+//
+// .photo-items{
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: row;
+//   align-items: center;
+// }
+
+.my-gallery-class {
+  display: flex;
+  justify-content: center;
+}
+
+.masonry{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-attachment: fixed;
+}
+
+.single-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px;
+  border: 2px solid black;
+}

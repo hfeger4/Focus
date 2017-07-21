@@ -29,7 +29,7 @@
   background-image: url("http://res.cloudinary.com/ds7hk07wv/image/upload/c_scale,w_3189/v1500570003/pexels-photo-498943_buw3a1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   height: 100%;
   display: flex;
