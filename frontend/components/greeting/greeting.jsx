@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const sessionLinks = () => (
   <nav className="header">
     <div className="icon-focus">
-      <Link to='/'><h1 className='logo-text'>focus</h1></Link>
-      <Link to='/'><i className="fa fa-camera-retro fa-2x"></i></Link>
+      <Link to='/photos'><h1 className='logo-text'>focus</h1></Link>
+      <Link to='/photos'><i className="fa fa-camera-retro fa-2x"></i></Link>
     </div>
     <div className="login-signup">
       <Link className="login-button" to="/login">Log in</Link>
@@ -18,8 +18,8 @@ const sessionLinks = () => (
 const personalGreeting = (currentUser, logout) => (
 	<nav className="header">
     <div className="icon-focus">
-      <Link to='/'><h1 className='logo-text'>focus</h1></Link>
-      <Link to='/'><i className="fa fa-camera-retro fa-2x"></i></Link>
+      <Link to='/photos'><h1 className='logo-text'>focus</h1></Link>
+      <Link to='/photos'><i className="fa fa-camera-retro fa-2x"></i></Link>
     </div>
     <h2>Welcome, {currentUser.username}!</h2>
     <div className="login-signup">

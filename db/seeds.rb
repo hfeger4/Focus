@@ -7,4 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Photo.destroy_all
 guest = User.create(username: "Guest", password: "password")
+
+
+photo = Photo.create(title: "camera", body: "lol", image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500488349/wood-night-camera-vintage_icnhpi.jpg", user_id: 1)

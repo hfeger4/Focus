@@ -11,20 +11,27 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
+import PhotosIndexContainer from './photos/photos_index_container';
 
 const App = () => (
   <div className="main-body">
     <header>
       <GreetingContainer />
     </header>
+    <Route path="/photos" component={PhotosIndexContainer} />
+
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
+
+
+
     <div className="footer">
       <div className="footer-icons">
         <Link to='/'><i className="fa fa-camera-retro fa-2x"></i></Link>
       </div>
       <div className="footer-icons">
         <i className="fa fa-home fa-2x" aria-hidden="true"></i>
+
       </div>
       <div className="footer-icons">
         <a href="https://github.com/hfeger4">
