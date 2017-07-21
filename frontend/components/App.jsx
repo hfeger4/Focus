@@ -12,12 +12,14 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import PhotosIndexContainer from './photos/photos_index_container';
+import PhotoShowContainer from './photos/photo_show_container';
 
 const App = () => (
   <div className="main-body">
     <header>
       <GreetingContainer />
     </header>
+    <ProtectedRoute path="/photos/:id" component={PhotoShowContainer} />
     <ProtectedRoute path="/photos" component={PhotosIndexContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />

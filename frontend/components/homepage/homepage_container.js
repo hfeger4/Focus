@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
 import { selectAllPhotos } from '../../reducers/selectors';
 import { fetchPhotos } from '../../actions/photo_actions';
-import PhotosIndex from './photos_index';
+import HomepageIndex from './homepage_index';
 
 const mapStateToProps =  (state) => {
   return {photos: selectAllPhotos(state)};
-
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -15,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PhotosIndex);
+)(HomepageIndex);
