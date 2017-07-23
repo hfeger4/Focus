@@ -24,6 +24,7 @@ const personalGreeting = (currentUser, logout) => (
     <h2></h2>
     <div className="login-signup">
       <Link className="login-button" to='/photos'>Photos</Link>
+      <Link className="login-button" to='/upload'>Upload</Link>
       <button className="sign-up-button" onClick={logout}>Log Out</button>
     </div>
 	</nav>

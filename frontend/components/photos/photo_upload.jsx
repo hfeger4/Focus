@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
-import Masonry from 'react-masonry-component';
 
 const customStyles = {
   overlay : {
@@ -15,8 +14,8 @@ const customStyles = {
 },
 content : {
   position                   : 'fixed',
-  height: "600px",
-  width: "600px",
+  height: "300px",
+  width: "300px",
   top                        : '50%',
   left                       : '50%',
   border                     : '1px solid black',
@@ -32,17 +31,41 @@ content : {
 }
 };
 
-class PhotoShow extends React.Component{
+class PhotoUpload extends React.Component{
   constructor(props){
     super(props);
+    const { currentUser, image_url } = this.props;
+    // console.log(currentUser.id);
     this.state = {
-      modalIsOpen: true,
-      username: '',
-      password: ''
+      title: "",
+      body: "",
+      image_url: "",
+      user_id: "",
+      modalIsOpen: true
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.upload = this.upload.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    // this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  upload(e){
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      window.cloudinary_options,
+      function(error, images){
+        if (error === null){
+          this.setState(
+            {image_url: image[0].url}
+          );
+        }
+    });
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    const photo = this.state;
+    this.props.createPhoto({photo});
   }
 
   openModal() {
@@ -51,29 +74,27 @@ class PhotoShow extends React.Component{
 
   closeModal() {
     this.setState({modalIsOpen: false});
-    this.props.history.push('/photos');
+    this.props.history.push('/');
  }
 
   render(){
-    if (this.state.modalIsOpen === undefined){
-      this.openModal();
-    }
-    const {photo} = this.props;
-    return (
+    return(
       <Modal
+        shouldCloseOnOverlayClick={false}
         isOpen={this.state.modalIsOpen}
         onRequestClose={this.closeModal}
         style={customStyles}
         contentLabel="Example Modal">
-        <div className="whole-photo-modal">
-          <div className="photo-modal">
-            <img src={ photo.image_url }/>
-          </div>
-          <div className="submit-button"></div>
-        </div>
-      </Modal>
+        <form>
+      <div>
+        <button onClick={this.upload}>Upload Image</button>
+      </div>
+      </form>
+      <button onClick={this.closeModal}>close</button>
+    </Modal>
+
     );
   }
 }
 
-export default withRouter(PhotoShow);
+export default withRouter(PhotoUpload);

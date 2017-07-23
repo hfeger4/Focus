@@ -13,12 +13,14 @@ import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import PhotosIndexContainer from './photos/photos_index_container';
 import PhotoShowContainer from './photos/photo_show_container';
+import PhotoUploadContainer from './photos/photo_upload_container';
 
 const App = () => (
   <div className="main-body">
     <header>
       <GreetingContainer />
     </header>
+    <ProtectedRoute path="/upload" component={PhotoUploadContainer} />
     <ProtectedRoute path="/photos/:id" component={PhotoShowContainer} />
     <ProtectedRoute path="/photos" component={PhotosIndexContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />

@@ -34,7 +34,7 @@ export const fetchPhoto = id => dispatch => (
 
 export const createPhoto = photo => dispatch => (
   APIUtil.createPhoto(photo).then(
-    (_photo => dispatch(receivePhoto(_photo))),
+    (new_photo => dispatch(receivePhoto(new_photo))),
     err => dispatch(receiveErrors(err.responseJSON))
 ));
 
