@@ -37,6 +37,8 @@ font-weight:bold;
 }
 
 .login-button{
+  display: flex;
+  align-items: center;
   padding: 5px;
   margin: 5px;
   color: rgba(255, 255, 255, 1)
@@ -79,6 +81,8 @@ font-weight:bold;
 }
 
 .explore-button{
+  display: flex;
+  align-items: center;
   padding: 20px;
   margin: 5px;
   color: rgba(255, 255, 255, 1)

@@ -62,7 +62,7 @@ class PhotoUpload extends React.Component{
     e.preventDefault();
     const photo = this.state;
     this.props.createPhoto(photo);
-    this.props.history.push('/');
+    this.props.history.push('/photos');
   }
 
   openModal() {
@@ -71,7 +71,7 @@ class PhotoUpload extends React.Component{
 
   closeModal() {
     this.setState({modalIsOpen: false});
-    this.props.history.push('/');
+    this.props.history.push('/photos');
  }
 
  update(field) {
