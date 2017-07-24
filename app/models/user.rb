@@ -5,7 +5,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_many :photos
+  has_many :photos, dependent: :destroy
+  has_many :albums, dependent: :destroy
 
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
