@@ -62,6 +62,7 @@ class PhotoUpload extends React.Component{
     e.preventDefault();
     const photo = this.state;
     this.props.createPhoto(photo);
+    this.props.history.push('/');
   }
 
   openModal() {
@@ -87,6 +88,7 @@ class PhotoUpload extends React.Component{
         onRequestClose={this.closeModal}
         style={customStyles}
         contentLabel="Example Modal">
+
       <div className='login-form-box'>
         <h1>Photo Upload</h1>
           <form onSubmit={this.handleSubmit}>

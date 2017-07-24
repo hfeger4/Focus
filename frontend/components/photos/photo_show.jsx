@@ -69,8 +69,6 @@ class PhotoShow extends React.Component{
     }
     const {photo} = this.props;
     const {title, body, user, id} = this.props.photo;
-    console.log(this.props);
-    console.log(user.id);
     return (
       <Modal
         isOpen={this.state.modalIsOpen}
@@ -82,10 +80,12 @@ class PhotoShow extends React.Component{
             <img src={ photo.image_url }/>
           </div>
           <div className="photo-description">
-            <label>Title:
+            <label className="description">Title:&nbsp;
+            <br/>
               <div>{title}</div>
             </label>
-            <label>Description:
+            <label className="description">Description:&nbsp;
+              <br/>
               <div>{body}</div>
             </label>
             <button className="submit-button"
