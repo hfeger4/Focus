@@ -12,8 +12,8 @@
  *= require_self
  */
 
-@import 'reset/reset.scss';
-@import 'api/main.scss';
-@import 'api/header.scss';
-@import 'api/sign_in.scss';
-@import 'api/photos.scss';
+@import './reset/reset';
+@import './api/main';
+@import './api/header';
+@import './api/photos';
+@import './api/sign_in';
