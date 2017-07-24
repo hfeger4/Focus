@@ -51,3 +51,36 @@
   flex-direction: column;
   border: 1px solid black;
 }
+
+.close-button {
+  color: white;
+  background-color: #A10000;
+  border: 1px solid #A10000;
+  border-radius: 1px;
+  padding: 0 11px;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 15px;
+  width: 200px;
+  height: 40px;
+}
+
+.close-button:hover{
+  background-color: #D60000;
+}
+
+.upload-form {
+ min-height: 150px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ width: 250px;
+}
+
+.upload-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

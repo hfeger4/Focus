@@ -11,6 +11,7 @@ Photo.destroy_all
 #Users
 guest = User.create(username: "Guest", password: "password")
 
+
 #Photos
 photo = Photo.create(title: "camera", body: "lol", image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500488349/wood-night-camera-vintage_icnhpi.jpg", user_id: 1)
 photo1 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500653696/pexels-photo-265683_ofcd0g.jpg", user_id: 1)

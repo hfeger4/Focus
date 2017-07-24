@@ -2,10 +2,10 @@ class Api::PhotosController < ApplicationController
   def index
     # cloud_name = ENV['CLOUD_NAME']
     # upload_preset = ENV['UPLOAD_PRESET']
-    if params[:user_id]
-      @photos = User.find(params[:user_id]).photos
-    elsif params[:current_user]
+    if params[:current_user]
       @photos = current_user.photos
+    elsif params[:user_id]
+      @photos = User.find(params[:user_id]).photos
     else
       @photos = Photo.all
     end

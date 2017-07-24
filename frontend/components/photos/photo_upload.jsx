@@ -14,8 +14,8 @@ const customStyles = {
 },
 content : {
   position                   : 'fixed',
-  height: "300px",
-  width: "300px",
+  height: "400px",
+  width: "250px",
   top                        : '50%',
   left                       : '50%',
   border                     : '1px solid black',
@@ -35,7 +35,6 @@ class PhotoUpload extends React.Component{
   constructor(props){
     super(props);
     const { currentUser, image_url } = this.props;
-    // console.log(currentUser.id);
     this.state = {
       title: "",
       body: "",
@@ -50,12 +49,10 @@ class PhotoUpload extends React.Component{
   }
 
   upload(e){
-    // console.log(this);
     e.preventDefault();
     cloudinary.openUploadWidget(
       window.cloudinary_options, (errors, images) => {
         if (errors === null){
-          // console.log(this);
           this.setState({image_url: images[0].url});
         }
     });
@@ -64,8 +61,7 @@ class PhotoUpload extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     const photo = this.state;
-    console.log(this.state);
-    this.props.createPhoto({photo});
+    this.props.createPhoto(photo);
   }
 
   openModal() {
@@ -84,7 +80,6 @@ class PhotoUpload extends React.Component{
  }
 
   render(){
-    // console.log(this.state);
     return(
       <Modal
         shouldCloseOnOverlayClick={false}
@@ -92,25 +87,43 @@ class PhotoUpload extends React.Component{
         onRequestClose={this.closeModal}
         style={customStyles}
         contentLabel="Example Modal">
-        <form onSubmit={this.handleSubmit}>
-      <div>
-        <button onClick={this.upload}>Upload Image</button>
-      </div>
-      <input type="text"
-             placeholder="Title"
-             value={this.state.title}
-             onChange={this.update('title')}>
-      </input>
-      <textarea type="text"
-                placeholder="Description"
-                value={this.state.body}
-                onChange={this.update('body')}>
-      </textarea>
-      <input type="submit"
-             value="Submit">
-      </input>
-      </form>
-      <button onClick={this.closeModal}>close</button>
+      <div className='login-form-box'>
+        <h1>Photo Upload</h1>
+          <form onSubmit={this.handleSubmit}>
+        <div className='upload-form'>
+          <div>
+            <button onClick={this.upload}
+                    className="submit-button"
+                    >Upload Image</button>
+          </div>
+          <br/>
+          <label>Title:
+            <input type="text"
+                   className="login-input"
+                   value={this.state.title}
+                   onChange={this.update('title')}>
+            </input>
+          </label>
+          <br/>
+          <label>Description:
+            <input type="text"
+                      className="login-input"
+                      value={this.state.body}
+                      onChange={this.update('body')}>
+            </input>
+         </label>
+         <br/>
+          <input type="submit"
+                 className="submit-button"
+                 value="Submit">
+          </input>
+          <button onClick={this.closeModal}
+                  className="close-button">
+                  Close
+          </button>
+          </div>
+          </form>
+        </div>
     </Modal>
 
     );
