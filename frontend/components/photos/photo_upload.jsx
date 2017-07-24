@@ -40,7 +40,7 @@ class PhotoUpload extends React.Component{
       title: "",
       body: "",
       image_url: "",
-      user_id: "",
+      user_id: currentUser.id,
       modalIsOpen: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -50,14 +50,13 @@ class PhotoUpload extends React.Component{
   }
 
   upload(e){
+    // console.log(this);
     e.preventDefault();
     cloudinary.openUploadWidget(
-      window.cloudinary_options,
-      function(error, images){
-        if (error === null){
-          this.setState(
-            {image_url: image[0].url}
-          );
+      window.cloudinary_options, (errors, images) => {
+        if (errors === null){
+          // console.log(this);
+          this.setState({image_url: images[0].url});
         }
     });
   }
@@ -65,6 +64,7 @@ class PhotoUpload extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     const photo = this.state;
+    console.log(this.state);
     this.props.createPhoto({photo});
   }
 
@@ -77,7 +77,14 @@ class PhotoUpload extends React.Component{
     this.props.history.push('/');
  }
 
+ update(field) {
+   return e => this.setState({
+     [field]: e.currentTarget.value
+   });
+ }
+
   render(){
+    // console.log(this.state);
     return(
       <Modal
         shouldCloseOnOverlayClick={false}
@@ -85,10 +92,23 @@ class PhotoUpload extends React.Component{
         onRequestClose={this.closeModal}
         style={customStyles}
         contentLabel="Example Modal">
-        <form>
+        <form onSubmit={this.handleSubmit}>
       <div>
         <button onClick={this.upload}>Upload Image</button>
       </div>
+      <input type="text"
+             placeholder="Title"
+             value={this.state.title}
+             onChange={this.update('title')}>
+      </input>
+      <textarea type="text"
+                placeholder="Description"
+                value={this.state.body}
+                onChange={this.update('body')}>
+      </textarea>
+      <input type="submit"
+             value="Submit">
+      </input>
       </form>
       <button onClick={this.closeModal}>close</button>
     </Modal>

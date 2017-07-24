@@ -23,23 +23,23 @@ export const removePhoto = photo => ({
 export const fetchPhotos = data => dispatch => (
   APIUtil.fetchPhotos(data).then(
     (photos => dispatch(receivePhotos(photos))),
-    err => dispatch(receiveErrors(err.responseJSON))
+    error => dispatch(receiveErrors(error.responseJSON))
 ));
 
 export const fetchPhoto = id => dispatch => (
   APIUtil.fetchPhoto(id).then(
     (photo => dispatch(receivePhoto(photo))),
-    err => dispatch(receiveErrors(err.responseJSON))
+    error => dispatch(receiveErrors(error.responseJSON))
 ));
 
 export const createPhoto = photo => dispatch => (
   APIUtil.createPhoto(photo).then(
     (new_photo => dispatch(receivePhoto(new_photo))),
-    err => dispatch(receiveErrors(err.responseJSON))
+    error => dispatch(receiveErrors(error.responseJSON))
 ));
 
 export const deletePhoto = id => dispatch => (
   APIUtil.destroyPhoto(id).then(
     (photo => dispatch(removePhoto(photo))),
-    err => dispatch(receiveErrors(err.responseJSON))
+    error => dispatch(receiveErrors(error.responseJSON))
 ));

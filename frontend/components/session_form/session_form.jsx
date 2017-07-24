@@ -130,7 +130,8 @@ class SessionForm extends React.Component {
 
       <div className="login-form-container">
         <div className="login-form">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form onSubmit={this.handleSubmit}
+              className="login-form-box">
           <h1>Welcome</h1>
           <br/>
           <div className="errors">
@@ -157,9 +158,14 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input className="submit-button" type="submit" value="Submit" />
+            <input className="submit-button"
+                   type="submit"
+                   value="Submit" />
           </div>
-          <input className="submit-button" type="submit" value="Guest Login" onClick={this.handleGuestSignIn} />
+          <input className="submit-button"
+                 type="submit"
+                 value="Guest Login"
+                 onClick={this.handleGuestSignIn} />
            <div className="instead">{this.navLink()}</div>
         </form>
         </div>

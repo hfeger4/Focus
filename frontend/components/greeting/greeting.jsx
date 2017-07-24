@@ -24,7 +24,9 @@ const personalGreeting = (currentUser, logout) => (
     <h2></h2>
     <div className="login-signup">
       <Link className="login-button" to='/photos'>Photos</Link>
-      <Link className="login-button" to='/upload'>Upload</Link>
+      <Link className="login-button" to='/upload'>
+        <i className="fa fa-cloud-upload fa-2x" aria-hidden="true"></i>
+      </Link>
       <button className="sign-up-button" onClick={logout}>Log Out</button>
     </div>
 	</nav>
