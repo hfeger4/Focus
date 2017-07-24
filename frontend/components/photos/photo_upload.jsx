@@ -95,8 +95,9 @@ class PhotoUpload extends React.Component{
         <div className='upload-form'>
           <div>
             <button onClick={this.upload}
-                    className="submit-button"
-                    >Upload Image</button>
+                    className="submit-button">
+                    Upload Image
+            </button>
           </div>
           <br/>
           <label>Title:
