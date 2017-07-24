@@ -20,10 +20,14 @@ const personalGreeting = (currentUser, logout) => (
     <div className="icon-focus">
       <Link to='/'><h1 className='logo-text'>focus</h1></Link>
       <Link to='/'><i className="fa fa-camera-retro fa-2x"></i></Link>
+      <Link className="explore-button" to='/photos'>
+        <i class="fa fa-compass" aria-hidden="true"></i>
+        Explore</Link>
     </div>
     <h2></h2>
     <div className="login-signup">
-      <Link className="login-button" to='/photos'>Photos</Link>
+      <Link className="login-button" to='/albums'>Albums</Link>
+      <i className="fa fa-user fa-2x" aria-hidden="true"></i>
       <Link className="login-button" to='/upload'>
         <i className="fa fa-cloud-upload fa-2x" aria-hidden="true"></i>
       </Link>

@@ -16,6 +16,7 @@
   justify-content: space-around;
   padding: 1px;
   margin: 1px;
+  color: white;
 }
 
 .icon-focus{
@@ -75,4 +76,10 @@ font-weight:bold;
 
 .logo-text:hover{
   font-weight: bold;
+}
+
+.explore-button{
+  padding: 20px;
+  margin: 5px;
+  color: rgba(255, 255, 255, 1)
 }

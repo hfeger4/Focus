@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
 import { selectAllPhotos } from '../../reducers/selectors';
-import { fetchPhotos } from '../../actions/photo_actions';
-import Homepage from './homepage';
+import { fetchAlbums } from '../../actions/album_actions';
+import AlbumsIndex from './album_index';
 
 const mapStateToProps =  (state) => {
-  return {photos: selectAllPhotos(state)};
+  return {albums: selectAllPhotos(state)};
+
 };
 
-
 const mapDispatchToProps = dispatch => ({
-  fetchPhotos:() => dispatch(fetchPhotos())
+  fetchAlbums:() => dispatch(fetchAlbums())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Homepage);
+)(AlbumsIndex);

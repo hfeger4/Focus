@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-class HomepageIndex extends React.Component{
+class Homepage extends React.Component{
   constructor(props){
     super(props);
   }
@@ -30,4 +30,4 @@ class HomepageIndex extends React.Component{
   }
 }
 
-export default withRouter(HomepageIndex);
+export default withRouter(Homepage);

@@ -20,26 +20,26 @@ export const removeAlbum = album => ({
   album
 });
 
-export const fetchPhotos = data => dispatch => (
-  APIUtil.fetchPhotos(data).then(
-    (photos => dispatch(receivePhotos(photos))),
+export const fetchAlbums = data => dispatch => (
+  APIUtil.fetchAlbums(data).then(
+    (albums => dispatch(receiveAlbums(albums))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
 
-export const fetchPhoto = id => dispatch => (
-  APIUtil.fetchPhoto(id).then(
-    (photo => dispatch(receivePhoto(photo))),
+export const fetchAlbum = id => dispatch => (
+  APIUtil.fetchAlbum(id).then(
+    (album => dispatch(receiveAlbum(album))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
 
-export const createPhoto = photo => dispatch => (
-  APIUtil.createPhoto(photo).then(
-    (new_photo => dispatch(receivePhoto(new_photo))),
+export const createAlbum = album => dispatch => (
+  APIUtil.createAlbum(album).then(
+    (new_album => dispatch(receiveAlbum(new_album))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
 
-export const deletePhoto = id => dispatch => (
-  APIUtil.destroyPhoto(id).then(
-    (photo => dispatch(removePhoto(photo))),
+export const deleteAlbum = id => dispatch => (
+  APIUtil.destroyAlbum(id).then(
+    (album => dispatch(removeAlbum(album))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
