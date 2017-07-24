@@ -42,7 +42,16 @@ class PhotoShow extends React.Component{
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    // this.handleDelete = this.handleDelete.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete(e){
+    e.preventDefault();
+    if(confirm("Are you sure you want to delete this photo?")){
+      this.props.deletePhoto(this.props.photo.id);
+      this.props.history.push('/');
+    }
+
   }
 
   openModal() {
@@ -59,6 +68,9 @@ class PhotoShow extends React.Component{
       this.openModal();
     }
     const {photo} = this.props;
+    const {title, body, user, id} = this.props.photo;
+    console.log(this.props);
+    console.log(user.id);
     return (
       <Modal
         isOpen={this.state.modalIsOpen}
@@ -69,7 +81,18 @@ class PhotoShow extends React.Component{
           <div className="photo-modal">
             <img src={ photo.image_url }/>
           </div>
-          <div className="submit-button"></div>
+          <div className="photo-description">
+            <label>Title:
+              <div>{title}</div>
+            </label>
+            <label>Description:
+              <div>{body}</div>
+            </label>
+            <button className="submit-button"
+              onClick={this.handleDelete}>
+              Delete
+            </button>
+          </div>
         </div>
       </Modal>
     );
