@@ -26,7 +26,7 @@ const PhotoReducer = (state = nullPhoto, action) => {
     case RECEIVE_PHOTOS:
       return action.photos;
     case RECEIVE_PHOTO:
-      const photo = {[action.photo.id]: action.id};
+      const photo = {[action.photo.id]: action.photo};
       return Object.assign({}, state, photo);
     case REMOVE_PHOTO:
       const newState = Object.assign({},state);
