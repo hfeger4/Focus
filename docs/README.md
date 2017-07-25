@@ -30,7 +30,7 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 
 **Objective:** Photos can be uploaded, viewed, and destroyed through the API.
 
-### Phase 3: Albums (1 day)
+### Phase 3: Albums (2 day)
 
 **Objective:** Photos belong to Albums that can be created, viewed, edited and destroyed through the API.
 
@@ -41,10 +41,6 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 ### Phase 5: Comments (1 day)
 
 **Objective:** Comments belong to a photo and can be created, viewed, and destroyed through the API.
-
-### Phase 6: Finalize CSS (1 day)
-
-**Objective:** Complete styling and add thumbnails for photo and album galleries.
 
 ### Bonus Features (TBD)
 - [ ] Infinite scrolling in photo index.

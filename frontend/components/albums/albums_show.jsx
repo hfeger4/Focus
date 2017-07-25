@@ -31,8 +31,14 @@ class AlbumShow extends React.Component{
     const {title, body, user, id} = this.props.album;
     return (
         <div className="album-show-page">
-          <h1>{title}</h1>
-          <h1>{this.props.album.id}</h1>
+          <div>
+            <h1>{title}</h1>
+            <h1>{this.props.album.id}</h1>
+          </div>
+          <button className="submit-button"
+            onClick={this.handleDelete}>
+            Delete
+          </button>
         </div>
     );
   }
