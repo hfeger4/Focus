@@ -12,10 +12,7 @@ const masonryOptions = {
 class AlbumsIndex extends React.Component{
   constructor(props){
     super(props);
-  }
-
-  componentWillMount() {
-    this.props.fetchAlbums();
+    console.log(props);
   }
 
   render(){
