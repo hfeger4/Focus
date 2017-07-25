@@ -49,7 +49,7 @@ class PhotoShow extends React.Component{
     e.preventDefault();
     if(confirm("Are you sure you want to delete this photo?")){
       this.props.deletePhoto(this.props.photo.id);
-      this.props.history.push('/');
+      this.props.history.push('/photos');
     }
 
   }

@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/photo_api_util';
+import * as APIUtil from '../util/album_api_util';
 import { receiveErrors } from '../actions/error_actions';
 
 export const RECEIVE_ALBUMS = 'RECEIVE_ALBUMS';

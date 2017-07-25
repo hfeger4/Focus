@@ -29,8 +29,8 @@ photo2 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/uplo
                      body: "Rainy day or car wash? You decide.")
 photo3 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500943155/pexels-photo-220917_1_m1h3xs.jpg",
                       user_id: 1,
-                      title: "Risk Taker",
-                      body: "Just my average saturday.")
+                      title: "Good Boy",
+                      body: "Seriously, he's a really good boy.")
 photo4 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/peacock-bird-plumage-display-50557_1_kyxlwg.jpg",
                       user_id: 1,
                       title: "Pretty Chicken",

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { login, signup, logout } from './actions/session_actions';
+import { fetchAlbums } from './actions/album_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -18,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
 
   window.login = login;
-
+  window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchAlbums = fetchAlbums;
 });
