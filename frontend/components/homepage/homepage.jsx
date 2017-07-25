@@ -51,7 +51,7 @@ class Homepage extends React.Component{
 
           </div>
           <div className="footer-icons">
-            <a href="https://github.com/hfeger4">
+            <a target="_blank" href="https://github.com/hfeger4">
             <i className="fa fa-github fa-2x" aria-hidden="true"></i>
             </a>
           </div>
