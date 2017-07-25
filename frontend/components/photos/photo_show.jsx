@@ -76,15 +76,12 @@ class PhotoShow extends React.Component{
         style={customStyles}
         contentLabel="Example Modal">
         <div className="whole-photo-modal">
+          <h1>{title}</h1>
           <div className="photo-modal">
             <img src={ photo.image_url }/>
           </div>
           <div className="photo-description">
-            <label className="description">Title:&nbsp;
-            <br/>
-              <div>{title}</div>
-            </label>
-            <label className="description">Description:&nbsp;
+            <label className="description">
               <br/>
               <div>{body}</div>
             </label>

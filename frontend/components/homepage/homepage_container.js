@@ -1,16 +1,26 @@
 import { connect } from 'react-redux';
-import { selectAllPhotos } from '../../reducers/selectors';
-import { fetchPhotos } from '../../actions/photo_actions';
+import { login, logout, signup, clearErrors } from '../../actions/session_actions';
 import Homepage from './homepage';
 
-const mapStateToProps =  (state) => {
-  return {photos: selectAllPhotos(state)};
+
+const mapStateToProps = ({ session }) => {
+  return {
+    loggedIn: Boolean(session.currentUser),
+    errors: session.errors
+  };
 };
 
+const mapDispatchToProps = (dispatch, { location }) => {
+  const formType = location.pathname.slice(1);
+  const processForm = (formType === 'login') ? login : signup;
+  return {
+    processForm: user => dispatch(processForm(user)),
+    login: user => dispatch(login(user)),
+    clearErrors: () => dispatch(clearErrors()),
+    formType
+  };
 
-const mapDispatchToProps = dispatch => ({
-  fetchPhotos:() => dispatch(fetchPhotos())
-});
+};
 
 export default connect(
   mapStateToProps,
