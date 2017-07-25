@@ -22,18 +22,20 @@ class AlbumsIndex extends React.Component{
     const {albums} = this.props;
 
     return (
-
-      <div className="masonry">
-        <Masonry
-          className={'my-gallery-class'}
-          elementType={'ul'}
-          options={masonryOptions}
-          disableImagesLoaded={false}
-          updateOnEachImageLoad={false}
-          >
-          Hello
-        </Masonry>
+    <div className="album-page">
+      <div className="albums">
+        <div  className="header-albums">
+          <h1>Albums</h1>
+        </div>
+          {albums.map( album => (
+            <div  key={album.id + "album"} className="single-album" >
+              <Link to={`/albums/${album.id}`}>
+                <h1>{ album.title }</h1>
+              </Link>
+            </div>
+          ))}
       </div>
+    </div>
     );
   }
 }

@@ -18,19 +18,23 @@ guest2 = User.create(username: "User", password: "password")
 photo = Photo.create(title: "Carpe Diem",
                      body: "Seize the day. For pictures.",
                      image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500943263/pexels-photo-507561_1_ekh1sk.jpg",
-                     user_id: 1)
+                     user_id: 1,
+                     album_id: 1)
 photo1 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/skydiving-jump-falling-parachuting-37656_aey05z.jpg",
                      user_id: 1,
                      title: "Risk Taker",
-                     body: "Just my average saturday.")
+                     body: "Just my average saturday.",
+                     album_id: 1)
 photo2 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/rain-day-car-lights-78497_d1ym6r.jpg",
                      user_id: 1,
                      title: "Car Wash",
-                     body: "Rainy day or car wash? You decide.")
+                     body: "Rainy day or car wash? You decide.",
+                     album_id: 1)
 photo3 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500943155/pexels-photo-220917_1_m1h3xs.jpg",
                       user_id: 1,
                       title: "Good Boy",
-                      body: "Seriously, he's a really good boy.")
+                      body: "Seriously, he's a really good boy.",
+                      album_id: 1)
 photo4 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/peacock-bird-plumage-display-50557_1_kyxlwg.jpg",
                       user_id: 1,
                       title: "Pretty Chicken",
