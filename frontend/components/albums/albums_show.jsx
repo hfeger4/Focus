@@ -28,13 +28,21 @@ class AlbumShow extends React.Component{
 
   render(){
     const {album} = this.props;
-    const {title, body, user, id} = this.props.album;
+    const {title, body, user, id, photos} = this.props.album;
     return (
         <div className="album-show-page">
           <div>
-            <h1>{title}</h1>
-            <h1>{this.props.album.id}</h1>
+            <h1>{title}{album.id}</h1>
           </div>
+          <ul className="album-show-page2">
+            { photos.map((photo) => (
+              <div key={photo.id + "photo"} className="album-photo">
+                <Link to={`/photos/${photo.id}`}>
+                  <img src={ photo.image_url } />
+                </Link>
+              </div>
+            ))}
+          </ul>
           <button className="submit-button"
             onClick={this.handleDelete}>
             Delete
