@@ -8,6 +8,7 @@ import { fetchAlbums } from './actions/album_actions';
 import { fetchUserPhotos } from './actions/photo_actions';
 import { fetchUserAlbums } from './actions/album_actions';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

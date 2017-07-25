@@ -21,8 +21,6 @@ class PhotoStream extends React.Component{
 
   render(){
     const {photos} = this.props;
-    console.log(photos);
-
     return (
 
       <div className="masonry">
