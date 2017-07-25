@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import { selectAlbum } from '../../reducers/selectors';
 import { fetchAlbum, deleteAlbum } from '../../actions/album_actions';
-import AlbumShow from './album_show';
+import AlbumShow from './albums_show';
 
 const mapStateToProps =  (state, props) => ({
-  photo: selectAlbum(state, props.match.params.id)
+  album: selectAlbum(state, props.match.params.id)
 });
 
 const mapDispatchToProps = (dispatch) => ({

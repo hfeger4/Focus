@@ -15,7 +15,7 @@ class AlbumShow extends React.Component{
   }
 
   componentDidMount(){
-    this.props.getAlbum(this.props.match.params.id);
+    this.props.fetchAlbum(this.props.match.params.id);
   }
 
   handleDelete(e){
@@ -27,13 +27,13 @@ class AlbumShow extends React.Component{
   }
 
   render(){
-    const {photo} = this.props;
-    const {title, body, user, id} = this.props.photo;
+    const {album} = this.props;
+    const {title, body, user, id} = this.props.album;
+    console.log(album);
     return (
         <div className="album-show-page">
           <h1>{title}</h1>
-
-
+          <h1>{this.props.album.id}</h1>
         </div>
     );
   }

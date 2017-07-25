@@ -27,8 +27,8 @@ const personalGreeting = (currentUser, logout) => (
     </div>
     <h2></h2>
     <div className="login-signup">
-      <Link className="login-button" to='/albums'>Albums</Link>
-      <i className="fa fa-user fa-2x" aria-hidden="true"></i>&nbsp;Profile
+      <Link to='/albums'><i className="fa fa-user fa-2x" aria-hidden="true"></i></Link>
+      <Link className="login-button" to='/albums'>Profile</Link>
       <Link className="login-button" to='/upload'>
         <i className="fa fa-cloud-upload fa-2x" aria-hidden="true"></i>
         &nbsp;Upload
