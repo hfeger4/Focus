@@ -8,7 +8,7 @@
   align-items: top;
   height: 100%;
   background-color: white;
-
+  flex-wrap: wrap;
 }
 
 .albums{
@@ -53,6 +53,7 @@
   flex-direction: row;
   background-color: white;
   height: 100%;
+  flex-wrap: wrap;
 }
 
 .album-photo{
