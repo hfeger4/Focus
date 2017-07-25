@@ -32,7 +32,7 @@ class AlbumShow extends React.Component{
     return (
         <div className="album-show-page">
           <div>
-            <h1>{title}{album.id}</h1>
+            <h1 album-h1>{title}{album.id}</h1>
           </div>
           <ul className="album-show-page2">
 
