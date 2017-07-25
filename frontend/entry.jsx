@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { login, signup, logout } from './actions/session_actions';
 import { fetchAlbums } from './actions/album_actions';
+import { fetchUserPhotos } from './actions/photo_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -23,4 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchAlbums = fetchAlbums;
+  window.fetchUserPhotos = fetchUserPhotos;
 });

@@ -17,6 +17,7 @@ import PhotoUploadContainer from './photos/photo_upload_container';
 import HomepageContainer from './homepage/homepage_container';
 import AlbumsIndexContainer from './albums/album_index_container';
 import AlbumsShowContainer from './albums/albums_show_container';
+import PhotoStreamContainer from './photos/photo_stream_container';
 
 const App = () => (
   <div className="main-body">
@@ -24,6 +25,7 @@ const App = () => (
       <GreetingContainer />
     </header>
     <Route exact path="/" component={HomepageContainer} />
+    <ProtectedRoute path="/users/:userId/photos" component={PhotoStreamContainer} />
     <ProtectedRoute path="/albums/:id" component={AlbumsShowContainer} />
     <ProtectedRoute path="/albums" component={AlbumsIndexContainer} />
     <ProtectedRoute path="/upload" component={PhotoUploadContainer} />

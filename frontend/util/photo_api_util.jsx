@@ -27,3 +27,10 @@ export const createPhoto = photo => (
     data: {photo}
   })
 );
+
+export const fetchUserPhotos = userId => (
+  $.ajax({
+    method: 'GET',
+    url: `api/users/${userId}/photos`
+  })
+);

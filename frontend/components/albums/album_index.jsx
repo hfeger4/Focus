@@ -32,7 +32,7 @@ class AlbumsIndex extends React.Component{
               <Link to={`/albums/${album.id}`}>
                 <h1>{ album.title }</h1>
               </Link>
-            </div>
+          </div>
           ))}
       </div>
     </div>

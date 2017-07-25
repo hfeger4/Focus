@@ -29,7 +29,6 @@ class AlbumShow extends React.Component{
   render(){
     const {album} = this.props;
     const {title, body, user, id} = this.props.album;
-    console.log(album);
     return (
         <div className="album-show-page">
           <h1>{title}</h1>

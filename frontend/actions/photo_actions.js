@@ -34,7 +34,7 @@ export const fetchPhoto = id => dispatch => (
 
 export const createPhoto = photo => dispatch => (
   APIUtil.createPhoto(photo).then(
-    (new_photo => dispatch(receivePhoto(new_photo))),
+    (newPhoto => dispatch(receivePhoto(newPhoto))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
 
@@ -43,3 +43,10 @@ export const deletePhoto = id => dispatch => (
     (photo => dispatch(removePhoto(photo))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
+
+export const fetchUserPhotos = userId => dispatch => (
+  APIUtil.fetchUserPhotos(userId).then(
+    (photos => dispatch(receivePhotos(photos))),
+    error => dispatch(receiveErrors(error.repsonseJSON))
+  )
+);
