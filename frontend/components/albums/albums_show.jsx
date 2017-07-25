@@ -35,13 +35,14 @@ class AlbumShow extends React.Component{
             <h1>{title}{album.id}</h1>
           </div>
           <ul className="album-show-page2">
-            { photos.map((photo) => (
+
+            { photos !== undefined ? photos.map((photo) => (
               <div key={photo.id + "photo"} className="album-photo">
                 <Link to={`/photos/${photo.id}`}>
                   <img src={ photo.image_url } />
                 </Link>
               </div>
-            ))}
+            )) : ""}
           </ul>
           <button className="submit-button"
             onClick={this.handleDelete}>
