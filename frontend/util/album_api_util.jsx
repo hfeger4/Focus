@@ -12,6 +12,13 @@ export const fetchAlbum = id => (
   })
 );
 
+export const fetchUserAlbums = userId => (
+  $.ajax({
+    method: 'GET',
+    url: `api/users/${userId}/albums`
+  })
+);
+
 export const destroyAlbum = id => (
   $.ajax({
     method: 'DELETE',

@@ -43,3 +43,10 @@ export const deleteAlbum = id => dispatch => (
     (album => dispatch(removeAlbum(album))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
+
+export const fetchUserAlbums = userId => dispatch => (
+  APIUtil.fetchUserAlbums(userId).then(
+    (albums => dispatch(receiveAlbums(albums))),
+    error => dispatch(receiveErrors(error.repsonseJSON))
+  )
+);

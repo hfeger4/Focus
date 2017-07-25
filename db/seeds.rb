@@ -70,7 +70,6 @@ album1 = Album.create(
         title: "World",
         body: "The world of warcraft",
         user_id: 1)
-
 album2 = Album.create(
         title: "Sky",
         body: "The world of skycraft",
@@ -79,6 +78,14 @@ album3 = Album.create(
         title: "Dirt",
         body: "The world of earthcraft",
         user_id: 1)
+album4 = Album.create(
+        title: "Land",
+        body: "The world of earthcraft",
+        user_id: 2)
+album5 = Album.create(
+        title: "Sea",
+        body: "The world of watercraft",
+        user_id: 2)
 #
 # photo = Photo.create(title: "camera",
 #                      body: "lol",
