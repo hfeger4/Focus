@@ -29,7 +29,7 @@ const App = () => (
     <Route exact path="/" component={HomepageContainer} />
     <ProtectedRoute path="/users/:userId/albums" component={AlbumStreamContainer} />
     <ProtectedRoute path="/users/:userId/photos" component={PhotoStreamContainer} />
-    <ProtectedRoute path="/albums" component={PhotoStreamContainer} />
+    <ProtectedRoute path="/albums/newAlbum" component={PhotoStreamContainer} />
     <ProtectedRoute path="/albums/:id" component={AlbumsShowContainer} />
     <ProtectedRoute path="/upload" component={PhotoUploadContainer} />
     <ProtectedRoute path="/photos/:id" component={PhotoShowContainer} />
