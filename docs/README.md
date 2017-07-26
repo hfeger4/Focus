@@ -10,6 +10,7 @@ Focus is a web application inspired by flickr built using Ruby on Rails and Reac
 - [ ] New account creation, login, and guest/demo login
 - [ ] Photos
 - [ ] Albums for Organizing photos
+- [ ] Comments on Photos
 - [ ] Tags
 - [ ] Production README
 

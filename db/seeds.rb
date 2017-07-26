@@ -9,6 +9,7 @@
 User.destroy_all
 Photo.destroy_all
 Album.destroy_all
+Comment.destroy_all
 #Users
 guest = User.create(username: "Guest", password: "password")
 guest2 = User.create(username: "User", password: "password")
@@ -86,7 +87,29 @@ album5 = Album.create(
         title: "Sea",
         body: "The world of watercraft",
         user_id: 2)
-#
+
+#Comments
+comment1 = Comment.create(
+        body: "Woah, cool photo!",
+        user_id: 1,
+        photo_id: 1)
+comment2 = Comment.create(
+        body: "Nice",
+        user_id: 1,
+        photo_id: 1)
+comment3 = Comment.create(
+        body: "hello there!",
+        user_id: 2,
+        photo_id: 1)
+comment4 = Comment.create(
+        body: "hello there!",
+        user_id: 2,
+        photo_id: 2)
+comment5 = Comment.create(
+        body: "hello there!",
+        user_id: 1,
+        photo_id: 2)
+
 # photo = Photo.create(title: "camera",
 #                      body: "lol",
 #                      image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1500488349/wood-night-camera-vintage_icnhpi.jpg",

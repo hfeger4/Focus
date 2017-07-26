@@ -121,7 +121,7 @@ class PhotoShow extends React.Component{
               <option> Select Album </option>
               {this.handleListAlbums()}
             </select>
-            <button value='submit'>&nbsp;Submit</button>
+            <button value="Submit">&nbsp;Submit</button>
             </form>
             </div>
             <button className="submit-button"

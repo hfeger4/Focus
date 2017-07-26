@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :photos, dependent: :destroy
   has_many :albums, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
