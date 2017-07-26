@@ -5,16 +5,21 @@ import Modal from 'react-modal';
 class CommentForm extends React.Component{
   constructor(props){
     super(props);
-    const { currentUser } = this.props;
+    const { currentUser, photo } = this.props;
     this.state = {
       body: "",
       user_id: currentUser.id,
       photo_id: ""
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    console.log(currentUser);
+    console.log(this.props);
   }
 
-  
+  componentWillMount(){
+    this.props.fetchComments();
+  }
+
+
 
   update(field) {
     return e => this.setState({
@@ -24,6 +29,9 @@ class CommentForm extends React.Component{
 
   render()
   {
+    return(
+      <div><h1>HELLO</h1></div>
+    );
   }
 
 }

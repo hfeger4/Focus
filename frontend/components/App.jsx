@@ -32,7 +32,7 @@ const App = () => (
     <ProtectedRoute path="/albums/:id" component={AlbumsShowContainer} />
     <ProtectedRoute path="/users/:userId/photos" component={PhotoStreamContainer} />
     <ProtectedRoute path="/users/:userId/albums" component={AlbumStreamContainer} />
-    <ProtectedRoute path="/comments" component={CommentFormContainer} />
+    <ProtectedRoute path="/photos/:photoId/comments" component={CommentFormContainer} />
     <ProtectedRoute path="/upload" component={PhotoUploadContainer} />
     <ProtectedRoute path="/photos/:id" component={PhotoShowContainer} />
     <ProtectedRoute path="/photos" component={PhotosIndexContainer} />

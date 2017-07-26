@@ -82,7 +82,6 @@ class PhotoUpload extends React.Component{
 
   render(){
     const { photo } = this.state;
-    console.log(this.state);
     return(
       <Modal
         shouldCloseOnOverlayClick={false}
@@ -102,7 +101,7 @@ class PhotoUpload extends React.Component{
             </button>
           </div>
           {this.state.image_url !== "" ? (
-            <div><i className="fa fa-check" aria-hidden="true"></i></div>) : <div>No Image</div>
+            <div>Photo Added<i className="fa fa-check" aria-hidden="true"></i></div>) : <div>No Image</div>
           }
 
           <br/>

@@ -20,7 +20,6 @@ const personalGreeting = (currentUser, logout) => (
     <div className="icon-focus">
       <Link to='/photos'><h1 className='logo-text'>focus</h1></Link>
       <Link to='/photos'><i className="fa fa-camera-retro fa-2x"></i></Link>
-      <Link to='/comments'>COMMENTS</Link>
       <Link className="explore-button" to='/photos'>
         <i className="fa fa-compass fa-2x" aria-hidden="true"></i>
         &nbsp;Explore

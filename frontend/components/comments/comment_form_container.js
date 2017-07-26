@@ -6,7 +6,6 @@ import CommentForm from './comment_form';
 const mapStateToProps = (state) => ({
   currentUser: state.session.currentUser,
   comments: selectAllComments(state),
-
 });
 
 const mapDispatchToProps = (dispatch) => ({

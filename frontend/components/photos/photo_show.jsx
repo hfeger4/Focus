@@ -98,37 +98,39 @@ class PhotoShow extends React.Component{
     }
     const {photo} = this.props;
     const {title, body, user, id} = this.props.photo;
-    console.log(id);
     return (
       <Modal
         isOpen={this.state.modalIsOpen}
         onRequestClose={this.closeModal}
         style={customStyles}
         contentLabel="Example Modal">
-        <div className="whole-photo-modal">
-          <h1>{title}</h1>
-          <div className="photo-modal">
-            <img src={ photo.image_url }/>
-          </div>
-          <div className="photo-description">
-            <label className="description">
-              <br/>
-              <div>{body}</div>
-            </label>
-            <div>
-            <form onSubmit={this.handleSubmit}>
-            <select value={this.state.album_id} onChange={this.handleChange}>
-              <option> Select Album </option>
-              {this.handleListAlbums()}
-            </select>
-            <button value="Submit"><h3>&nbsp;&nbsp;&nbsp;Submit</h3></button>
-            </form>
+        <div className="entire-photo">
+            <div className="whole-photo-modal">
+              <h1>{title}</h1>
+              <div className="photo-modal">
+                <img src={ photo.image_url }/>
+              </div>
+              <div className="photo-description">
+                <label className="description">
+                  <br/>
+                  <div>{body}</div>
+                </label>
+                <div>
+                <form onSubmit={this.handleSubmit}>
+                <select value={this.state.album_id} onChange={this.handleChange}>
+                  <option> Select Album </option>
+                  {this.handleListAlbums()}
+                </select>
+                <button value="Submit"><h3>&nbsp;&nbsp;&nbsp;Submit</h3></button>
+                </form>
+                </div>
+                <button className="submit-button"
+                  onClick={this.handleDelete}>
+                  Delete
+                </button>
+              </div>
             </div>
-            <button className="submit-button"
-              onClick={this.handleDelete}>
-              Delete
-            </button>
-          </div>
+            <Link to={`/photos/${id}/comments`}>Comments</Link>
         </div>
       </Modal>
     );

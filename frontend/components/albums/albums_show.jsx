@@ -44,7 +44,7 @@ class AlbumShow extends React.Component{
               </div>
             )) : ""}
           </ul>
-          <button className="submit-button"
+          <button className="create-album"
             onClick={this.handleDelete}>
             Delete
           </button>

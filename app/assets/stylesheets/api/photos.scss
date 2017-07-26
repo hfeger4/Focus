@@ -101,3 +101,9 @@
   align-items: center;
   padding: 10px;
 }
+
+.entire-photo{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

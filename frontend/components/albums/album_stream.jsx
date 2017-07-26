@@ -37,10 +37,13 @@ class AlbumStream extends React.Component{
                 <h1>{ album.title }</h1>
               </Link>
           </div>
+
           ))}
+
+
       </div>
     </div>
-    <AlbumFormContainer/>
+        <div className="create-album"><AlbumFormContainer/></div>
     </div>
 
     );

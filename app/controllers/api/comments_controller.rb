@@ -1,6 +1,6 @@
 class Api::CommentsController < ApplicationController
   def index
-    @comment = Photo.find(params[:photo_id]).comments
+    @comments = Photo.find(params[:photo_id]).comments
     # @comment = Comment.where(photo_id: params[:photo_id])
   end
 
