@@ -10,12 +10,12 @@ class Api::AlbumsController < ApplicationController
   end
 
   def create
-    @albums = Album.new(album_params)
-    @albums.user_id = current_user.id
-    if @albums.save
+    @album = Album.new(album_params)
+    @album.user_id = current_user.id
+    if @album.save
       render :show
     else
-      render json: @albums.errors.full_messages, status: 422
+      render json: @album.errors.full_messages, status: 422
     end
   end
 

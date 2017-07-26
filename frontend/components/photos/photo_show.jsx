@@ -93,7 +93,6 @@ class PhotoShow extends React.Component{
  }
 
   render(){
-    console.log(this.props);
     if (this.state.modalIsOpen === undefined){
       this.openModal();
     }
