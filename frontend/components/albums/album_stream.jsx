@@ -23,10 +23,12 @@ class AlbumStream extends React.Component{
     const {albums} = this.props;
 
     return (
+      <div className="album-stream">
     <div className="album-page">
       <div className="albums">
         <div  className="header-albums">
           <h1>Albums</h1>
+          <br />
         </div>
           {albums.map( album => (
             <div  key={album.id + "album"} className="single-album" >
@@ -37,6 +39,9 @@ class AlbumStream extends React.Component{
           ))}
       </div>
     </div>
+    <Link to="/albums"><h1>Create Album</h1></Link>
+    </div>
+
     );
   }
 }

@@ -50,7 +50,7 @@ class AlbumCreate extends React.Component{
     e.preventDefault();
     const album = this.state;
     this.props.createAlbum(album);
-    this.props.history.push('/albums');
+    this.props.history.push('/photos');
   }
 
   openModal() {
@@ -59,7 +59,7 @@ class AlbumCreate extends React.Component{
 
   closeModal() {
     this.setState({modalIsOpen: false});
-    this.props.history.push('/albums');
+    this.props.history.push('/photos');
  }
 
  update(field) {
@@ -75,7 +75,7 @@ class AlbumCreate extends React.Component{
         isOpen={this.state.modalIsOpen}
         onRequestClose={this.closeModal}
         style={customStyles}
-        contentLabel="Example Modal">
+        contentLabel="Example">
 
       <div className='login-form-box'>
         <h1>Album Create</h1>

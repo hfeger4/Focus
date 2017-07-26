@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import Masonry from 'react-masonry-component';
+import selectAllAlbums from '../../reducers/selectors';
 
 const customStyles = {
   overlay : {
@@ -38,11 +39,19 @@ class PhotoShow extends React.Component{
     this.state = {
       modalIsOpen: true,
       username: '',
-      password: ''
+      password: '',
+      album_id: ''
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount(){
+    const { match, fetchUserAlbums } = this.props;
+    this.props.fetchUserAlbums(this.props.photo.user_id);
   }
 
   handleDelete(e){
@@ -54,6 +63,20 @@ class PhotoShow extends React.Component{
 
   }
 
+  handleChange(e){
+    e.preventDefault();
+    this.setState({album_id: e.target.value});
+  }
+
+  handleListAlbums(){
+    const listAlbums = this.props.albums.map((album) => {
+      return(
+        <option key={album.id + "album"} value={album.id}>{album.title}</option>
+      );
+    });
+    return listAlbums;
+  }
+
   openModal() {
     this.setState({modalIsOpen: true});
   }
@@ -63,7 +86,13 @@ class PhotoShow extends React.Component{
     this.props.history.push('/photos');
  }
 
+ handleSubmit() {
+   let photo = Object.assign({}, this.props.photo, this.state);
+   this.props.updatePhoto(this.props.photo);
+ }
+
   render(){
+    console.log(this.props);
     if (this.state.modalIsOpen === undefined){
       this.openModal();
     }
@@ -89,6 +118,13 @@ class PhotoShow extends React.Component{
               onClick={this.handleDelete}>
               Delete
             </button>
+            <form onSubmit={this.handleSubmit}>
+            <select value={this.state.album_id} onChange={this.handleChange}>
+              <option> Select Album </option>
+              {this.handleListAlbums()}
+            </select>
+            <button value='submit'>Submit</button>
+            </form>
           </div>
         </div>
       </Modal>

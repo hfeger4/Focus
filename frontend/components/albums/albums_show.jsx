@@ -22,7 +22,7 @@ class AlbumShow extends React.Component{
     e.preventDefault();
     if(confirm("Are you sure you want to delete this album?")){
       this.props.deleteAlbum(this.props.album.id);
-      this.props.history.push('/albums');
+      this.props.history.push('/photos');
     }
   }
 
@@ -32,7 +32,7 @@ class AlbumShow extends React.Component{
     return (
         <div className="album-show-page">
           <div>
-            <h1 album-h1>{title}{album.id}</h1>
+            <h1 className="album-h1">{title}</h1>
           </div>
           <ul className="album-show-page2">
 

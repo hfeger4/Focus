@@ -50,3 +50,9 @@ export const fetchUserPhotos = userId => dispatch => (
     error => dispatch(receiveErrors(error.repsonseJSON))
   )
 );
+
+export const updatePhoto = photo => dispatch => (
+  APIUtil.updatePhoto(photo).then(
+    (newPhoto => dispatch(receivePhoto(newPhoto))),
+    error => dispatch(receiveErrors(error.responseJSON))
+));
