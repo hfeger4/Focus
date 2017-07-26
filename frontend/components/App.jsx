@@ -20,17 +20,19 @@ import AlbumsShowContainer from './albums/albums_show_container';
 import PhotoStreamContainer from './photos/photo_stream_container';
 import AlbumFormContainer from './albums/album_form_container';
 import AlbumStreamContainer from './albums/album_stream_container';
+import CommentFormContainer from './comments/comment_form_container';
 
 const App = () => (
   <div className="main-body">
     <header>
       <GreetingContainer />
     </header>
+
     <Route exact path="/" component={HomepageContainer} />
-    <ProtectedRoute exact path="/albums" component={AlbumFormContainer} />
-    <ProtectedRoute path="/users/:userId/albums" component={AlbumStreamContainer} />
-    <ProtectedRoute path="/users/:userId/photos" component={PhotoStreamContainer} />
     <ProtectedRoute path="/albums/:id" component={AlbumsShowContainer} />
+    <ProtectedRoute path="/users/:userId/photos" component={PhotoStreamContainer} />
+    <ProtectedRoute path="/users/:userId/albums" component={AlbumStreamContainer} />
+    <ProtectedRoute path="/comments" component={CommentFormContainer} />
     <ProtectedRoute path="/upload" component={PhotoUploadContainer} />
     <ProtectedRoute path="/photos/:id" component={PhotoShowContainer} />
     <ProtectedRoute path="/photos" component={PhotosIndexContainer} />

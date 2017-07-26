@@ -53,7 +53,7 @@ class PhotoUpload extends React.Component{
     cloudinary.openUploadWidget(
       window.cloudinary_options, (errors, images) => {
         if (errors === null){
-          this.setState({image_url: images[0].url});
+          this.setState({image_url: images[0].secure_url});
         }
     });
   }

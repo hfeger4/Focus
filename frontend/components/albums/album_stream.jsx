@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import Masonry from 'react-masonry-component';
+import AlbumFormContainer from './album_form_container';
 
 const masonryOptions = {
   // fitWidth: true,
@@ -39,7 +40,7 @@ class AlbumStream extends React.Component{
           ))}
       </div>
     </div>
-    <Link to="/albums"><h1>Create Album</h1></Link>
+    <AlbumFormContainer/>
     </div>
 
     );

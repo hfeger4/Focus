@@ -5,8 +5,9 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { login, signup, logout } from './actions/session_actions';
 import { fetchAlbums } from './actions/album_actions';
-import { fetchUserPhotos } from './actions/photo_actions';
+import { fetchUserPhotos, updatePhoto } from './actions/photo_actions';
 import { fetchUserAlbums } from './actions/album_actions';
+import { fetchComments } from './actions/comment_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,4 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchAlbums = fetchAlbums;
   window.fetchUserPhotos = fetchUserPhotos;
   window.fetchUserAlbums = fetchUserAlbums;
+  window.updatePhoto = updatePhoto;
+  window.fetchComments = fetchComments;
 });

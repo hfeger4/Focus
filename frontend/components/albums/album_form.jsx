@@ -39,7 +39,7 @@ class AlbumCreate extends React.Component{
       title: "",
       body: "",
       user_id: currentUser.id,
-      modalIsOpen: true
+      modalIsOpen: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -50,7 +50,6 @@ class AlbumCreate extends React.Component{
     e.preventDefault();
     const album = this.state;
     this.props.createAlbum(album);
-    this.props.history.push('/photos');
   }
 
   openModal() {
@@ -59,7 +58,6 @@ class AlbumCreate extends React.Component{
 
   closeModal() {
     this.setState({modalIsOpen: false});
-    this.props.history.push('/photos');
  }
 
  update(field) {
@@ -70,6 +68,8 @@ class AlbumCreate extends React.Component{
 
   render(){
     return(
+      <div>
+        <button onClick={this.openModal}>Create Album</button>
       <Modal
         shouldCloseOnOverlayClick={true}
         isOpen={this.state.modalIsOpen}
@@ -109,7 +109,7 @@ class AlbumCreate extends React.Component{
           </form>
         </div>
     </Modal>
-
+</div>
     );
   }
 }

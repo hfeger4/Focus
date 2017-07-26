@@ -88,7 +88,7 @@ class PhotoShow extends React.Component{
 
  handleSubmit() {
    let photo = Object.assign({}, this.props.photo, this.state);
-   this.props.updatePhoto(this.props.photo);
+   this.props.updatePhoto(photo);
    this.props.history.push('/photos');
  }
 
@@ -98,6 +98,7 @@ class PhotoShow extends React.Component{
     }
     const {photo} = this.props;
     const {title, body, user, id} = this.props.photo;
+    console.log(id);
     return (
       <Modal
         isOpen={this.state.modalIsOpen}
@@ -120,7 +121,7 @@ class PhotoShow extends React.Component{
               <option> Select Album </option>
               {this.handleListAlbums()}
             </select>
-            <button value="Submit">&nbsp;Submit</button>
+            <button value="Submit"><h3>&nbsp;&nbsp;&nbsp;Submit</h3></button>
             </form>
             </div>
             <button className="submit-button"
