@@ -27,6 +27,7 @@ const App = () => (
       <GreetingContainer />
     </header>
     <Route exact path="/" component={HomepageContainer} />
+    <ProtectedRoute exact path="/albums/" component={AlbumFormContainer} />
     <ProtectedRoute path="/users/:userId/albums" component={AlbumStreamContainer} />
     <ProtectedRoute path="/users/:userId/photos" component={PhotoStreamContainer} />
     <ProtectedRoute path="/albums/:id" component={AlbumsShowContainer} />
