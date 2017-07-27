@@ -11,8 +11,9 @@ Photo.destroy_all
 Album.destroy_all
 Comment.destroy_all
 #Users
-guest = User.create(username: "Guest", password: "password")
-guest2 = User.create(username: "User", password: "password")
+guest = User.create(username: "Guest", password: "clever1")
+guest2 = User.create(username: "Michael", password: "ultimatepassword")
+guest3 =
 
 
 #Photos
@@ -22,26 +23,26 @@ photo = Photo.create(title: "Carpe Diem",
                      user_id: 1,
                      album_id: 1)
 photo1 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/skydiving-jump-falling-parachuting-37656_aey05z.jpg",
-                     user_id: 1,
+                     user_id: 2,
                      title: "Risk Taker",
                      body: "Just my average saturday.",
-                     album_id: 1)
+                     album_id: 2)
 photo2 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/rain-day-car-lights-78497_d1ym6r.jpg",
                      user_id: 1,
                      title: "Car Wash",
                      body: "Rainy day or car wash? You decide.",
                      album_id: 1)
 photo3 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943155/pexels-photo-220917_1_m1h3xs.jpg",
-                      user_id: 1,
+                      user_id: 2,
                       title: "Good Boy",
                       body: "Seriously, he's a really good boy.",
-                      album_id: 1)
+                      album_id: 2)
 photo4 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/peacock-bird-plumage-display-50557_1_kyxlwg.jpg",
                       user_id: 1,
                       title: "Pretty Chicken",
                       body: "Through careful evolution this chicken evolved to be too beautiful to eat.")
 photo5 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943155/pexels-photo-301292_1_odpybw.jpg",
-                      user_id: 1,
+                      user_id: 2,
                       title: "Smoke Break",
                       body: "Settled on Paris.")
 photo6 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943155/pexels-photo-261877_1_zasbgg.jpg",
@@ -49,7 +50,7 @@ photo6 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upl
                       title: "Reflection",
                       body: "Pretty picture.")
 photo7 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943155/pexels-photo-265683_1_vzv2hi.jpg",
-                      user_id: 1,
+                      user_id: 2,
                       title: "Tech Setup",
                       body: "2017 tech setup.")
 photo8 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500943156/pexels-photo-518557_kcksal.jpg",
@@ -61,7 +62,7 @@ photo9 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upl
                       title: "Classic Watch",
                       body: "On the to-buy list.")
 photo10 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1500942189/beer_gdjakq.jpg",
-                      user_id: 2,
+                      user_id: 1,
                       title: "Beers and Candles",
                       body: "There are beers and candles here, very interesting.")
 
@@ -74,7 +75,7 @@ album1 = Album.create(
 album2 = Album.create(
         title: "Sky",
         body: "The world of skycraft",
-        user_id: 1)
+        user_id: 2)
 album3 = Album.create(
         title: "Dirt",
         body: "The world of earthcraft",
@@ -82,7 +83,7 @@ album3 = Album.create(
 album4 = Album.create(
         title: "Land",
         body: "The world of earthcraft",
-        user_id: 2)
+        user_id: 1)
 album5 = Album.create(
         title: "Sea",
         body: "The world of watercraft",
