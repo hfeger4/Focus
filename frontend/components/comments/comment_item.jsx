@@ -29,10 +29,11 @@ class CommentItem extends React.Component{
 
     return (
       <div className="comment-item">
+        <div>{this.props.comment.user_id}</div>
       <div>{this.props.comment.body}</div>
       {myuser === commentuser ? (
         <button onClick={this.handleDelete}>&nbsp;<i className="fa fa-times" aria-hidden="true"></i>
-</button>
+        </button>
       ) : ""}
 
       </div>

@@ -11,9 +11,9 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  createTag:(comment) => dispatch(createTag(comment)),
+  createTag:(tag) => dispatch(createTag(tag)),
   deleteTag:(id) => dispatch(deleteTag(id)),
-  fetchTags:(comments) => dispatch(fetchTags(comments)),
+  fetchTags:(tags) => dispatch(fetchTags(tags)),
   fetchPhoto:(id) => dispatch(fetchPhoto(id)),
 });
 

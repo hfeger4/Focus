@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import CommentItem from './comment_item';
 import CommentCreateContainer from './comment_create_container';
+import CommentFormContainer from '../tags/tag_form_container';
 
 class CommentForm extends React.Component{
   constructor(props){

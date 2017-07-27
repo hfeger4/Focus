@@ -10,6 +10,7 @@ User.destroy_all
 Photo.destroy_all
 Album.destroy_all
 Comment.destroy_all
+Tag.destroy_all
 #Users
 guest = User.create(username: "Guest", password: "password")
 guest2 = User.create(username: "Michael", password: "ultimatepassword")
@@ -101,7 +102,9 @@ photo16 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/up
                     album_id: 1)
 
 #Tags
-
+t1 = Tag.create(name: "Awesome")
+t2 = Tag.create(name: "Funny")
+t2 = Tag.create(name: "Cute")
 
 
 #Albums
