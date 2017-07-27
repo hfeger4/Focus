@@ -12,6 +12,28 @@
   margin: 10px;
 }
 
+.individual{
+  color: white;
+}
+
+.all-comments{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, .2);
+  padding: 10px;
+  flex-direction: column;
+}
+
+.comment-item{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .comment-form{
   background-image: url("https://res.cloudinary.com/ds7hk07wv/image/upload/v1501137088/wood-night-camera-vintage_1_hywojs.jpg");
   background-size: cover;
@@ -22,6 +44,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.new-comment-s{
+  font-size: 20px;
+  color: white;
 }
 
 .photo-comments{
@@ -36,6 +63,11 @@
   flex-direction: column;
   background-color: rgba(0, 0, 0, .2);
   color: rgba(255, 255, 255, .9)
+}
+
+.text-area{
+  color: white;
+  font-size: 20px;
 }
 
 .individual-comment{

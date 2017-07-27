@@ -24,12 +24,18 @@ class CommentItem extends React.Component{
     }
   }
 
-  render()
-  {
+  render(){
+    const myuser = this.props.currentUser.id;
+    const commentuser = this.props.comment.user_id;
+
     return (
-      <div>
+      <div className="comment-item">
       <div>{this.props.comment.body}</div>
-      <button onClick={this.handleDelete}>Delete</button>
+      {myuser === commentuser ? (
+        <button onClick={this.handleDelete}>&nbsp;<i className="fa fa-times" aria-hidden="true"></i>
+</button>
+      ) : ""}
+
       </div>
 
     );

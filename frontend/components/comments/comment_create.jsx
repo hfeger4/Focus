@@ -23,7 +23,8 @@ class CommentCreate extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.createComment(this.state);
+    this.props.createComment(this.state)
+    .then(this.setState({body: ""}));
   }
 
 
@@ -32,13 +33,13 @@ class CommentCreate extends React.Component{
 
     return(
       <form onSubmit={this.handleSubmit}>
-      <textarea className=""
+      <input className="text-area"
         type="text"
         placeholder="Add a comment"
         value={this.state.body}
         onChange={this.update('body')}
         />
-      <input type='submit' value="New Comment"/>
+      <input className="new-comment-s" type='submit' value="New Comment"/>
       </form>
     );
   }
