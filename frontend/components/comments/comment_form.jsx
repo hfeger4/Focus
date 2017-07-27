@@ -43,7 +43,7 @@ class CommentForm extends React.Component{
                   {photo.comments.map((comment)=>
                     <div key={comment.id + "comment"}
                       className="individual-comment">
-                      {username}:&nbsp;{comment.body}
+                      {comment.body}
                     </div>
 
                   )}
