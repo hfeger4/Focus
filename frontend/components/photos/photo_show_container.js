@@ -6,7 +6,8 @@ import PhotoShow from './photo_show';
 
 const mapStateToProps =  (state, props) => ({
   photo: selectPhoto(state, props.match.params.id),
-  albums: selectAllAlbums(state)
+  albums: selectAllAlbums(state),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -21,7 +21,6 @@ class CommentForm extends React.Component{
 
   handleDelete(e){
     e.preventDefault();
-    console.log(this.props);
     this.props.deleteComment(this.props.comment.id);
   }
 

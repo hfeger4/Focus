@@ -126,10 +126,12 @@ class PhotoShow extends React.Component{
                 </form>
                 </div>
                 <button className="submit-button"><Link to={`/comments/${id}`}>Comments Page</Link></button>
-                <button className="submit-button"
-                  onClick={this.handleDelete}>
-                  Delete
-                </button>
+                {photo.user_id === this.props.currentUser.id ? (
+                  <button className="submit-button"
+                    onClick={this.handleDelete}>
+                    Delete
+                  </button>
+                ) : <div></div>}
               </div>
             </div>
         </div>
