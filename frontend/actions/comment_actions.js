@@ -20,8 +20,8 @@ export const removeComment = comment => ({
   comment
 });
 
-export const fetchComments = data => dispatch => (
-  APIUtil.fetchComments(data).then(
+export const fetchComments = photoId => dispatch => (
+  APIUtil.fetchComments(photoId).then(
     (comments => dispatch(receiveComments(comments))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));

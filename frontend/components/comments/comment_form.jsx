@@ -1,60 +1,34 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
+import CommentItem from './comment_item';
+import CommentCreateContainer from './comment_create_container';
 
 class CommentForm extends React.Component{
   constructor(props){
     super(props);
-    const { currentUser, match} = this.props;
-    const photoId = match.params.photoId;
-    this.state = {
-      body: "",
-      user_id: "",
-      photo_id: ""
-    };
-    this.handleDelete = this.handleDelete.bind(this);
+    this.photoId= this.props.match.params.photoId;
   }
 
   componentWillMount(){
-    this.props.fetchPhotos();
+    this.props.fetchPhoto(this.props.match.params.photoId);
+    this.props.fetchComments(this.props.match.params.photoId);
   }
 
-  handleDelete(e){
-    e.preventDefault();
-    this.props.deleteComment(this.props.comment.id);
-  }
+
 
   render()
   {
-    const photoId = this.props.match.params.photoId;
-    const photos = this.props.photos;
-    const photoArr = photos.filter(photoel => photoel.id === parseInt(photoId));
-    const photo = photoArr[0];
-    const username = this.props.currentUser.username;
     return(
-        <div className="comment-form">
-          { photo ? (
-            <div>
-              <div className="photo-comments">
-                <img className="comments-photo" src={ photo.image_url } />
-                <div className="comments">
-                  <div className="comment-header">Comments</div>
-                  {photo.comments.map((comment)=>
-                    <div key={comment.id + "comment"}
-                      className="individual-comment">
-                      {comment.body}
-                    </div>
+      <div className="comment-form">
+        <img src={this.props.photo.image_url} className="comments-photo"></img>
+      <div className="photo-comments">
+         {this.props.comments.length > 0 ? this.props.comments.map((comment) => (
+         <CommentItem currentUser={this.props.currentUser} deleteComment={this.props.deleteComment} key={comment.id + "comment"} comment={comment} />)) : ("")}
+      </div>
+      <CommentCreateContainer photo={this.props.photo} createComment={this.props.createComment}/>
+      </div>
 
-                  )}
-                </div>
-              </div>
-              <div className="comment-input">Comment:</div>
-
-            </div>
-          ) : (
-            <h1></h1>
-          )}
-        </div>
     );
   }
 

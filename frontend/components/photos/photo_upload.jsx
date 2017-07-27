@@ -36,6 +36,7 @@ class PhotoUpload extends React.Component{
     super(props);
     const { currentUser, image_url } = this.props;
     this.state = {
+      id: "",
       title: "",
       body: "",
       image_url: "",
@@ -62,7 +63,7 @@ class PhotoUpload extends React.Component{
     e.preventDefault();
     const photo = this.state;
     this.props.createPhoto(photo);
-    this.props.history.push('/photos');
+    // this.props.history.push(`/photos/${photo.id}`);
   }
 
   openModal() {
@@ -101,7 +102,7 @@ class PhotoUpload extends React.Component{
             </button>
           </div>
           {this.state.image_url !== "" ? (
-            <div>Photo Added<i className="fa fa-check" aria-hidden="true"></i></div>) : <div>No Image</div>
+            <div className="upload-check">Photo Added<i className="fa fa-check" aria-hidden="true"></i></div>) : <div className="upload-check">No Image</div>
           }
 
           <br/>

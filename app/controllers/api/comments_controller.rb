@@ -1,11 +1,17 @@
 class Api::CommentsController < ApplicationController
   def index
-    @comments = Photo.find(params[:photo_id]).comments
+    if params[:photo_id]
+      @comments = Photo.find(params[:photo_id]).comments
+      render :index
+    else
+      @comments = Comment.all
+    end
     # @comment = Comment.where(photo_id: params[:photo_id])
   end
 
   def create
     @comment = Comment.new(comment_params)
+    @comment.user_id = current_user.id
     if @comment.save
       render :show
     else

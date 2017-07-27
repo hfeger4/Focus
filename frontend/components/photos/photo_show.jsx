@@ -87,6 +87,11 @@ class PhotoShow extends React.Component{
     this.props.history.push('/photos');
  }
 
+ // handleSubmit() {
+ //   let photo = Object.assign({}, this.props.photo, this.state);
+ //   this.props.updatePhoto(photo).then((newPhoto)=> this.props.history.push(`/photos/${newPhoto.id}`));
+ // }
+
  handleSubmit() {
    let photo = Object.assign({}, this.props.photo, this.state);
    this.props.updatePhoto(photo);

@@ -56,3 +56,12 @@ export const updatePhoto = photo => dispatch => (
     (newPhoto => dispatch(receivePhoto(newPhoto))),
     error => dispatch(receiveErrors(error.responseJSON))
 ));
+
+// export const updatePhoto = photo => dispatch => (
+//   APIUtil.updatePhoto(photo).then(
+//     (newPhoto => {
+//       dispatch(receivePhoto(newPhoto));
+//       return newPhoto;
+//     }),
+//     error => dispatch(receiveErrors(error.responseJSON))
+// ));

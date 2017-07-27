@@ -70,7 +70,7 @@ class AlbumCreate extends React.Component{
   render(){
     return(
       <div>
-        <button onClick={this.openModal}>Create Album</button>
+        <button className="create-album" onClick={this.openModal}>Create Album</button>
       <Modal
         shouldCloseOnOverlayClick={true}
         isOpen={this.state.modalIsOpen}
