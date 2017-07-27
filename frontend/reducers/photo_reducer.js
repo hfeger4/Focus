@@ -36,7 +36,7 @@ const PhotoReducer = (state = nullPhoto, action) => {
       return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, nullPhoto,
+      return merge({}, state,
         {errors}
       );
     default:

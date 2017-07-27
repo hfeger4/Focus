@@ -100,6 +100,9 @@ photo16 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/up
                     body: "They say this bridge can be seen from space.",
                     album_id: 1)
 
+#Tags
+
+
 
 #Albums
 album1 = Album.create(
@@ -145,11 +148,11 @@ comment5 = Comment.create(
         user_id: 1,
         photo_id: 2)
 
-rand_comments = ["Amazing!", "This looks soo good!", "I like it.", "Very nice.", "Cool picture!", "I've always wanted to see this."]
+rand_comments = ["Amazing!", "This looks soo good!", "I like it.", "Very nice.", "Cool picture!", "I've always wanted to see this.", "This is terrific", "Oh, I've always wanted one!"]
 
 (1..Photo.count).each do |photo_id|
   random_comments = rand_comments.sample(3)
-  user_nums = (1..User.count).to_a
+  user_nums = (1..User.all.count).to_a
   user_id = user_nums.sample
   random_comments.each do |comment|
     Comment.create!(body: comment, user_id: user_id, photo_id: photo_id)

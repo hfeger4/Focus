@@ -32,7 +32,7 @@ const CommentReducer = (state = nullComment, action) => {
       return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, nullComment,
+      return merge({}, state,
         {errors}
       );
     default:

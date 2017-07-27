@@ -1,6 +1,7 @@
 export const selectAllPhotos = ({ photos }) => Object.keys(photos).map(id => photos[id]);
 export const selectAllAlbums = ({ albums }) => Object.keys(albums).map(id => albums[id]);
 export const selectAllComments = ({ comments }) => Object.keys(comments).map(id => comments[id]);
+export const selectAllTags = ({ tags }) => Object.keys(tags).map(id => tags[id]);
 
 export const selectPhoto = ({photos}, id) => {
   return photos[id] || {};
