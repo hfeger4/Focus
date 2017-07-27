@@ -92,10 +92,12 @@ class PhotoShow extends React.Component{
  //   this.props.updatePhoto(photo).then((newPhoto)=> this.props.history.push(`/photos/${newPhoto.id}`));
  // }
 
- handleSubmit() {
+ handleSubmit(e) {
+   e.preventDefault();
+   if(confirm("Are you sure you want to add this photo to your album?")){
    let photo = Object.assign({}, this.props.photo, this.state);
    this.props.updatePhoto(photo);
-   this.props.history.push('/photos');
+   this.props.history.push('/photos');}
  }
 
   render(){
@@ -136,6 +138,7 @@ class PhotoShow extends React.Component{
                 <button className="submit-button"><Link to={`/comments/${id}`}>Comments Page</Link></button>
                 {photo.user_id === this.props.currentUser.id ? (
                   <button className="submit-button"
+                    type="button"
                     onClick={this.handleDelete}>
                     Delete
                   </button>
