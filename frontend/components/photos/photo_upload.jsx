@@ -61,9 +61,10 @@ class PhotoUpload extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
+    if(confirm("Are you sure you want to add this photo to your library?")){
     const photo = this.state;
     this.props.createPhoto(photo);
-    // this.props.history.push(`/photos/${photo.id}`);
+    this.props.history.push("/photos/");}
   }
 
   openModal() {
