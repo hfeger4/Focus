@@ -117,13 +117,16 @@ class PhotoShow extends React.Component{
                   <div>{body}</div>
                 </label>
                 <div>
-                <form onSubmit={this.handleSubmit}>
-                <select value={this.state.album_id} onChange={this.handleChange}>
-                  <option> Select Album </option>
-                  {this.handleListAlbums()}
-                </select>
-                <button value="Submit"><h3>&nbsp;&nbsp;&nbsp;Submit</h3></button>
-                </form>
+               {photo.user_id === this.props.currentUser.id ? (
+                  <form onSubmit={this.handleSubmit}>
+
+                  <select value={this.state.album_id} onChange={this.handleChange}>
+                    <option> Select Album </option>
+                    {this.handleListAlbums()}
+                  </select>
+                  <button value="Submit"><h3>&nbsp;&nbsp;&nbsp;Submit</h3></button>
+                  </form>
+                ) : (<div></div>) }
                 </div>
                 <button className="submit-button"><Link to={`/comments/${id}`}>Comments Page</Link></button>
                 {photo.user_id === this.props.currentUser.id ? (
