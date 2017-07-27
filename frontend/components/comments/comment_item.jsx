@@ -7,7 +7,6 @@ class CommentItem extends React.Component{
     super(props);
     const { currentUser, match} = this.props;
     const photoId = match.params.photoId;
-    console.log(photoId);
     this.photoId= match.params.photoId;
     this.state = {
       body: "",
