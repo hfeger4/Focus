@@ -24,26 +24,26 @@ class AlbumStream extends React.Component{
     const {albums} = this.props;
 
     return (
-      <div className="album-stream">
-    <div className="album-page">
+  <div className="album-stream">
       <div className="albums">
-        <div  className="header-albums">
-          <h1>Albums</h1>
-          <br />
-        </div>
-          {albums.map( album => (
-            <div  key={album.id + "album"} className="single-album" >
-              <Link to={`/albums/${album.id}`}>
-                <h1>{ album.title }</h1>
-              </Link>
+        <div className="album-and-title">
+          <div className="album-font">Welcome to your Albums!</div>
+          <div className="album-font">Create and view albums here.</div>
+          <div  className="header-albums">
+            <div className="album-font">Albums</div>
           </div>
-
-          ))}
-
-
-      </div>
+          <div className="album-list">
+            {albums.map( album => (
+              <div  key={album.id + "album"}>
+                <Link to={`/albums/${album.id}`}>
+                  <button className="single-album" >{ album.title }</button>
+                </Link>
+            </div>
+            ))}
+          </div>
+          </div>
     </div>
-        <div className="create-album"><AlbumFormContainer/></div>
+        <button className="create-album"><AlbumFormContainer/></button>
     </div>
 
     );

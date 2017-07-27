@@ -1,3 +1,56 @@
 // Place all the styles related to the api/comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comments-link{
+  font-size: 20px;
+}
+
+.comments-photo{
+  width: 500px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.comment-form{
+  background-image: url("https://res.cloudinary.com/ds7hk07wv/image/upload/v1501137088/wood-night-camera-vintage_1_hywojs.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-comments{
+  display: flex;
+  justify-content: center;
+}
+
+.comments{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, .2);
+  color: rgba(255, 255, 255, .9)
+}
+
+.individual-comment{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.comment-header{
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+.comment-input{
+  font-size: 20px;
+  color: white;
+  opacity: .9;
+}

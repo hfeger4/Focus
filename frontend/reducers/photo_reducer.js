@@ -12,11 +12,13 @@ import {
 
 const nullPhoto = Object.freeze({
   0: {
+    id: "",
     title: "",
     body: "",
     image_url: "",
     user_id: null,
-    album_id: null
+    album_id: null,
+    comments: []
   }
 });
 

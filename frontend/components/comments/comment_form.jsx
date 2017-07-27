@@ -5,32 +5,57 @@ import Modal from 'react-modal';
 class CommentForm extends React.Component{
   constructor(props){
     super(props);
-    const { currentUser, photo } = this.props;
+    const { currentUser, match} = this.props;
+    const photoId = match.params.photoId;
     this.state = {
       body: "",
-      user_id: currentUser.id,
+      user_id: "",
       photo_id: ""
     };
-    console.log(currentUser);
-    console.log(this.props);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentWillMount(){
-    this.props.fetchComments();
+    this.props.fetchPhotos();
   }
 
-
-
-  update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+  handleDelete(e){
+    e.preventDefault();
+    console.log(this.props);
+    this.props.deleteComment(this.props.comment.id);
   }
 
   render()
   {
+    const photoId = this.props.match.params.photoId;
+    const photos = this.props.photos;
+    const photoArr = photos.filter(photoel => photoel.id === parseInt(photoId));
+    const photo = photoArr[0];
+    const username = this.props.currentUser.username;
     return(
-      <div><h1>HELLO</h1></div>
+        <div className="comment-form">
+          { photo ? (
+            <div>
+              <div className="photo-comments">
+                <img className="comments-photo" src={ photo.image_url } />
+                <div className="comments">
+                  <div className="comment-header">Comments</div>
+                  {photo.comments.map((comment)=>
+                    <div key={comment.id + "comment"}
+                      className="individual-comment">
+                      {username}:&nbsp;{comment.body}
+                    </div>
+
+                  )}
+                </div>
+              </div>
+              <div className="comment-input">Comment:</div>
+
+            </div>
+          ) : (
+            <h1></h1>
+          )}
+        </div>
     );
   }
 

@@ -39,13 +39,6 @@
   border: 1px solid black;
 }
 
-.whole-photo-modal{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .photo-modal{
   display: flex;
   justify-content: center;
@@ -81,6 +74,13 @@
 }
 
 .upload-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.whole-photo-modal{
   display: flex;
   justify-content: center;
   align-items: center;

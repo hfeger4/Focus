@@ -71,6 +71,7 @@ class PhotoShow extends React.Component{
   handleListAlbums(){
     const listAlbums = this.props.albums.map((album) => {
       return(
+
         <option key={album.id + "album"} value={album.id}>{album.title}</option>
       );
     });
@@ -124,13 +125,13 @@ class PhotoShow extends React.Component{
                 <button value="Submit"><h3>&nbsp;&nbsp;&nbsp;Submit</h3></button>
                 </form>
                 </div>
+                <button className="submit-button"><Link to={`/comments/${id}`}>Comments Page</Link></button>
                 <button className="submit-button"
                   onClick={this.handleDelete}>
                   Delete
                 </button>
               </div>
             </div>
-            <Link to={`/photos/${id}/comments`}>Comments</Link>
         </div>
       </Modal>
     );

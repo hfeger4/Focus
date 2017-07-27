@@ -50,6 +50,7 @@ class AlbumCreate extends React.Component{
     e.preventDefault();
     const album = this.state;
     this.props.createAlbum(album);
+    this.closeModal();
   }
 
   openModal() {

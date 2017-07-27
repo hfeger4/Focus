@@ -11,14 +11,44 @@
   flex-wrap: wrap;
 }
 
+.album-and-title{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 10px;
+}
+
+.album-font{
+  font-size: 40px;
+  color: white;
+  opacity: .9;
+}
+
+.album-list{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 400px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
 .album-h1{
   font-size: 50px;
+  color: white;
+  opacity: .9;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .2);
 }
 
 .albums{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: 300px;
 }
 
 .header-albums{
@@ -42,9 +72,20 @@
   border: 1px solid #0276FD;
   height: 50px;
   color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.single-album:hover{
+  background-color: #0276FD
 }
 
 .album-show-page{
+  background-image: url("https://res.cloudinary.com/ds7hk07wv/image/upload/v1501133270/pexels-photo-499446_1_qd0d83.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +98,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: white;
   height: 100%;
   flex-wrap: wrap;
 }
@@ -65,11 +105,19 @@
 .album-photo{
   width: 200px;
   margin: 10px;
+  padding: 5px;
   border: 1px solid black;
+  background-color: white;
 
 }
 
 .album-stream{
+  background-image: url("https://res.cloudinary.com/ds7hk07wv/image/upload/v1501133270/pexels-photo-499446_1_qd0d83.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   background-color: white;
@@ -84,11 +132,15 @@
   border: 1px solid #0276FD;
   border-radius: 1px;
   padding: 0 11px;
-  margin-top: 8px;
+  margin-top: 100px;
   text-align: center;
   font-size: 15px;
   width: 350px;
   height: 75px;
   font-size: 40px;
+  text-align: center;
+}
 
+.create-album:hover{
+  background-color: #0276FD
 }

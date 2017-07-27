@@ -22,7 +22,7 @@ class AlbumShow extends React.Component{
     e.preventDefault();
     if(confirm("Are you sure you want to delete this album?")){
       this.props.deleteAlbum(this.props.album.id);
-      this.props.history.push('/photos');
+      this.props.history.push(`/users/${this.props.currentUser.id}/albums`);
     }
   }
 

@@ -20,7 +20,6 @@ class AlbumsIndex extends React.Component{
 
   render(){
     const {albums} = this.props;
-
     return (
     <div className="album-page">
       <div className="albums">

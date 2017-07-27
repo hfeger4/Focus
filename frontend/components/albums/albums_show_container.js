@@ -4,7 +4,8 @@ import { fetchAlbum, deleteAlbum } from '../../actions/album_actions';
 import AlbumShow from './albums_show';
 
 const mapStateToProps =  (state, props) => ({
-  album: selectAlbum(state, props.match.params.id)
+  album: selectAlbum(state, props.match.params.id),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
