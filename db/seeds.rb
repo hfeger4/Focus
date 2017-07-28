@@ -100,6 +100,30 @@ photo16 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/up
                     title: "Light Up Bridge",
                     body: "They say this bridge can be seen from space.",
                     album_id: 1)
+photo17 = Photo.create(image_url: "",
+                    user_id: 1,
+                    title: "Delicious Dish",
+                    body: "Delicious dish prepared for you.")
+photo18 = Photo.create(image_url: "",
+                    user_id: 1,
+                    title: "Cool Guy",
+                    body: "Someone has to take a picture of the photographer.",
+                    album_id: 1)
+photo19 = Photo.create(image_url: "",
+                    user_id: 1,
+                    title: "Butterfly",
+                    body: "Another day another flower",
+                    album_id: 1)
+photo20 = Photo.create(image_url: "",
+                    user_id: 1,
+                    title: "Arctic Dog",
+                    body: "Looking comfortable in his big jacket.",
+                    album_id: 1)
+photo21 = Photo.create(image_url: "",
+                    user_id: 1,
+                    title: "Light Up Bridge",
+                    body: "They say this bridge can be seen from space.",
+                    album_id: 1)
 
 #Tags
 t1 = Tag.create(name: "Awesome")
@@ -149,19 +173,19 @@ comment3 = Comment.create(
         user_id: 2,
         photo_id: 1)
 comment4 = Comment.create(
-        body: "hello there!",
+        body: "Pretty interesting photo",
         user_id: 2,
         photo_id: 2)
 comment5 = Comment.create(
-        body: "hello there!",
+        body: "This one sure is interesting",
         user_id: 1,
-        photo_id: 2)
+        photo_id: 3)
 
 rand_comments = ["Amazing!", "This looks soo good!", "I like it.", "Very nice.", "Cool picture!", "I've always wanted to see this.", "This is terrific", "Oh, I've always wanted one!"]
 
-(1..Photo.count).each do |photo_id|
+(1..Photo.length).each do |photo_id|
   random_comments = rand_comments.sample(3)
-  user_nums = (1..User.all.count).to_a
+  user_nums = (1..User.all.length).to_a
   user_id = user_nums.sample
   random_comments.each do |comment|
     Comment.create!(body: comment, user_id: user_id, photo_id: photo_id)

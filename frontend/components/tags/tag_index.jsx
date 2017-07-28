@@ -25,8 +25,7 @@ class TagIndex extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     this.setState({photo_id: this.props.photo.id});
-    let tag = this.state;
-    this.props.createTag(tag);
+    this.props.createTag(this.state);
   }
 
   update(field) {

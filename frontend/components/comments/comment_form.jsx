@@ -20,7 +20,7 @@ class CommentForm extends React.Component{
 
   displayTags(){
   const tagsIdx =  this.props.tags.map((tag) => (
-    <li>{tag.name} <button value={tag.id} onClick={this.handleDelete}>Delete Tag</button></li>
+    <li>{tag.name} <button value={tag.id} onClick={this.handleDelete}>&nbsp;<i className="fa fa-times" aria-hidden="true"></i></button></li>
 
   ));
   return tagsIdx;
@@ -28,7 +28,7 @@ class CommentForm extends React.Component{
 
   handleDelete(e){
     e.preventDefault;
-    if(confirm("Are you sure you want to delete this comment?")){
+    if(confirm("Are you sure you want to delete this tag?")){
       this.props.deleteTag(e.target.value);
     }
   }
@@ -36,11 +36,16 @@ class CommentForm extends React.Component{
 
   render()
   {
-    console.log(this.props);
     return(
 
       <div className="comment-form">
-        <img src={this.props.photo.image_url} className="comments-photo"></img>
+      <div>
+          <img src={this.props.photo.image_url} className="comments-photo"></img>
+         <div className="tag-form">
+                <TagIndexContainer/>
+                {this.displayTags()}
+        </div>
+      </div>
       <div className="photo-comments">
         <div>
             <div className="all-comments">
@@ -51,8 +56,6 @@ class CommentForm extends React.Component{
             <CommentCreateContainer photo={this.props.photo} createComment={this.props.createComment}/>
             </div>
         </div>
-        <TagIndexContainer/>
-        {this.displayTags()}
       </div>
       </div>
 

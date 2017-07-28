@@ -48,16 +48,6 @@ class CommentCreate extends React.Component{
   }
 
 }
-// <div>
-// <form onSubmit={this.handleSubmit}>
-// <input className="text-area"
-//   type="text"
-//   placeholder="Add a comment"
-//   value={this.state.body}
-//   onChange={this.update('body')}
-//   />
-// </form>
-// <button className="new-comment-s" onClick={this.handleSubmit}>New Comment</button>
-// </div>
+
 
 export default withRouter(CommentCreate);
