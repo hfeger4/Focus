@@ -87,11 +87,6 @@ class PhotoShow extends React.Component{
     this.props.history.push('/photos');
  }
 
- // handleSubmit() {
- //   let photo = Object.assign({}, this.props.photo, this.state);
- //   this.props.updatePhoto(photo).then((newPhoto)=> this.props.history.push(`/photos/${newPhoto.id}`));
- // }
-
  handleSubmit(e) {
    e.preventDefault();
    if(confirm("Are you sure you want to add this photo to your album?")){
@@ -127,7 +122,7 @@ class PhotoShow extends React.Component{
                {photo.user_id === this.props.currentUser.id ? (
                   <form onSubmit={this.handleSubmit}>
 
-                  <select value={this.state.album_id} onChange={this.handleChange}>
+                  <select className="dropdown" value={this.state.album_id} onChange={this.handleChange}>
                     <option> Select Album </option>
                     {this.handleListAlbums()}
                   </select>

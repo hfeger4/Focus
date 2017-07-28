@@ -22,7 +22,7 @@ class CommentForm extends React.Component{
   displayTags(){
   if(this.props.tags){
   const tagsIdx =  this.props.tags.map((tag) => (
-    <li>{tag.name} <button value={tag.id} onClick={this.handleDelete}>
+    <li key={tag.id + "tag"}>{tag.name} <button value={tag.id} onClick={this.handleDelete}>
       &nbsp;<i className="fa fa-times" aria-hidden="true"></i></button></li>
   ));
   return tagsIdx;}

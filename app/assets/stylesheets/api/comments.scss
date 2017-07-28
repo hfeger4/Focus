@@ -25,6 +25,9 @@
   background-color: rgba(0, 0, 0, .2);
   padding: 10px;
   flex-direction: column;
+  flex-wrap: wrap;
+  height: 600px;
+  width: 400px;
 }
 
 .time{
@@ -47,9 +50,9 @@
 
 .comment-form{
   background-image: url("https://res.cloudinary.com/ds7hk07wv/image/upload/v1501137088/wood-night-camera-vintage_1_hywojs.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: 100% auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
   background-position: center;
   height: 100%;
   display: flex;

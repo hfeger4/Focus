@@ -22,13 +22,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 
-  window.login = login;
-  window.store = store;
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchAlbums = fetchAlbums;
-  window.fetchUserPhotos = fetchUserPhotos;
-  window.fetchUserAlbums = fetchUserAlbums;
-  window.updatePhoto = updatePhoto;
-  window.fetchComments = fetchComments;
 });

@@ -24,14 +24,13 @@ class TagIndex extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    if (this.state.name == ""){
+    if (this.state.name === ""){
 
     }else{
       this.setState({photo_id: this.props.photo.id});
       this.props.createTag(this.state);
     }
     this.state.name = "";
-    console.log(this.state);
 
   }
 
@@ -43,13 +42,13 @@ class TagIndex extends React.Component{
 
   render(){
     return(
-      <div className="comment-form">
+      <div className="add-tag-bar">
         <form onSubmit={this.handleSubmit}>
 
           <input type="text"
                   onChange={this.update("name")}
                   value={this.state.name}
-                  placeholder="Add a tag">
+                  placeholder="Add a unique tag">
           </input>
           <input type="submit" value="Add Tag"></input>
         </form>
