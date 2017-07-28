@@ -11,7 +11,6 @@ const mapStateToProps = (state, props) => ({
   photo: selectPhoto(state, props.match.params.photoId),
   comments: selectAllComments(state),
   tags: selectAllTags(state)
-
 });
 
 const mapDispatchToProps = (dispatch) => ({

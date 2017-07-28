@@ -8,7 +8,7 @@ import TagIndexContainer from '../tags/tag_index_container';
 class CommentForm extends React.Component{
   constructor(props){
     super(props);
-    this.photoId= this.props.match.params.photoId;
+    this.photoId = this.props.match.params.photoId;
     this.handleDelete = this.handleDelete.bind(this);
   }
 
@@ -18,18 +18,20 @@ class CommentForm extends React.Component{
     this.props.fetchTags(this.props.match.params.photoId);
   }
 
-  displayTags(){
-  const tagsIdx =  this.props.tags.map((tag) => (
-    <li>{tag.name} <button value={tag.id} onClick={this.handleDelete}>&nbsp;<i className="fa fa-times" aria-hidden="true"></i></button></li>
 
+  displayTags(){
+  if(this.props.tags){
+  const tagsIdx =  this.props.tags.map((tag) => (
+    <li>{tag.name} <button value={tag.id} onClick={this.handleDelete}>
+      &nbsp;<i className="fa fa-times" aria-hidden="true"></i></button></li>
   ));
-  return tagsIdx;
+  return tagsIdx;}
   }
 
   handleDelete(e){
     e.preventDefault;
     if(confirm("Are you sure you want to delete this tag?")){
-      this.props.deleteTag(e.target.value);
+      this.props.deleteTag(e.currentTarget.value);
     }
   }
 

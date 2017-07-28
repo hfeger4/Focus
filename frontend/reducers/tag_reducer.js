@@ -17,7 +17,7 @@ const nullTag = Object.freeze({
   }
 });
 
-const CommentReducer = (state = nullTag, action) => {
+const TagReducer = (state = nullTag, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_TAGS:
@@ -31,7 +31,7 @@ const CommentReducer = (state = nullTag, action) => {
       return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, nullTag,
+      return Object.assign({}, state,
         {errors}
       );
     default:
@@ -39,4 +39,4 @@ const CommentReducer = (state = nullTag, action) => {
   }
 };
 
-export default CommentReducer;
+export default TagReducer;

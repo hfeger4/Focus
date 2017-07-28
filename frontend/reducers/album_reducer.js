@@ -32,7 +32,7 @@ const AlbumReducer = (state = nullAlbum, action) => {
       return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, nullAlbum,
+      return Object.assign({}, nullAlbum,
         {errors}
       );
     default:

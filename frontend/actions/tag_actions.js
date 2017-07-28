@@ -28,8 +28,7 @@ export const fetchTags = photoId => dispatch => (
 
 export const createTag = tag => dispatch => (
   APIUtil.createTag(tag).then(
-    (newTag => dispatch(receiveTag(newTag))),
-    error => dispatch(receiveErrors(error.responseJSON))
+    (newTag => dispatch(receiveTag(newTag)))
 ));
 
 export const deleteTag = id => dispatch => (
