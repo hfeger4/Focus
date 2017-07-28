@@ -36,8 +36,8 @@ Using the [React Modal](https://github.com/reactjs/react-modal), photos are disp
 
 ## Comments
 <img src="./docs/screen_clippings/comments_clear.png" width="600">
-Comments have 3 components to create, view, and delete them. Using React these containers can be called in a single form to display these components.
-Comments are stored in the database under a `comments` table and are joined to both `photos` and `users` through polymorphic associations. It contains the columns `body`, `user_id`, and `photo_id`. Through these associations `comments` can be accessed from `photos` without the need for a joins table.
+
+Comments have three components to create, view, and delete them. Using React these containers can be called in a single form to display the components. Comments are stored in the database under a `comments` table and are joined to both `photos` and `users` through polymorphic associations. It contains the columns `body`, `user_id`, and `photo_id`. Through these associations `comments` can be accessed from `photos` without the need for a joins table.
 
 ## Future Direction for Project
 
