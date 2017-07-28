@@ -325,8 +325,6 @@ photo47 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/up
                 body: ""
                 )
 photo48 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245350/mario-luigi-yoschi-figures-163036_dvlrum.jpg
-
-
 ",
                 user_id: 2,
                 title: "Heroes",
@@ -347,7 +345,7 @@ tag6 = Tag.create(name: "Cool")
 
 
 tagging1 = Tagging.create(photo_id: photo1.id, tag_id: tag1.id)
-(0..Photo.count).each do |photoId|
+(0..Photo.count-1).each do |photoId|
   random_tags = rand_tags.sample(2)
   random_tags.each do |tag|
     Tagging.create!(photo_id: photoId, tag_id: tag.id)
@@ -386,7 +384,7 @@ comment2 = Comment.create(
 
 rand_comments = ["Amazing!", "This looks soo good!", "I like it.", "Very nice.", "Cool picture!", "I've always wanted to see this.", "This is terrific", "Do you know where this is?"]
 
-(2..Photo.count).each do |photo_id|
+(2..Photo.count-1).each do |photo_id|
   random_comments = rand_comments.sample(1)
   user_nums = (1..User.all.count).to_a
   user_id = user_nums.sample
@@ -395,7 +393,7 @@ rand_comments = ["Amazing!", "This looks soo good!", "I like it.", "Very nice.",
   end
 end
 
-(1..Photo.count).each do |photo_id|
+(1..Photo.count-1).each do |photo_id|
   random_comments = rand_comments.sample(1)
   user_nums = (1..User.all.count).to_a
   user_id = user_nums.sample
@@ -404,7 +402,7 @@ end
   end
 end
 
-(1..Photo.count).each do |photo_id|
+(1..Photo.count-1).each do |photo_id|
   random_comments = rand_comments.sample(1)
   user_nums = (1..User.all.count).to_a
   user_id = user_nums.sample
