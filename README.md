@@ -1,24 +1,25 @@
-# README
+# Focus
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Focus Website](https://focusthis.herokuapp.com/#/)
 
-Things you may want to cover:
+Focus is a full-stack web application inspired by Flickr that utilizes:
+- A Ruby on Rails backend
+- A PostgreSQL database
+- React.js with a Redux architectural framework on the fontend.
 
-* Ruby version
+## Features and Implementation
+### Photos
+Using the [React Masonry Component](https://github.com/eiriklv/react-masonry-component), photos are displayed as a responsive gallery that rearrange according to the size of the window.
 
-* System dependencies
+![photo-gallery](./screen_clippings/gallery.png)
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+Using the [React Modal](https://github.com/reactjs/react-modal), photos are displayed in a convenient pop-up that allows
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Future Direction for Project
 
-* Deployment instructions
-
-* ...
+In the future I plan to add the following to add functionality similar to Flickr:
+- Clickable tags that direct you to a show-page full of photos with those tags.
+- Clickable photo display that links to comments and tags section.
