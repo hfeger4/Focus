@@ -13,7 +13,28 @@ Focus is a full-stack web application inspired by Flickr that utilizes:
 ## Single Page Application
 Using [React-Router](https://github.com/ReactTraining/react-router), Focus can use a single page to store it's contents on a root page.
 
-<img src="docs/screen_clippings/react_router.png" width="600">
+```ruby
+
+const App = () => (
+  <div className="main-body">
+    <header>
+      <GreetingContainer />
+    </header>
+
+    <Route exact path="/" component={HomepageContainer} />
+    <ProtectedRoute path="/albums/:id" component={AlbumsShowContainer} />
+    <ProtectedRoute path="/users/:userId/photos" component={PhotoStreamContainer} />
+    <ProtectedRoute path="/users/:userId/albums" component={AlbumStreamContainer} />
+    <ProtectedRoute path="/comments/:photoId" component={CommentFormContainer} />
+    <ProtectedRoute path="/upload" component={PhotoUploadContainer} />
+    <ProtectedRoute path="/photos/:id" component={PhotoShowContainer} />
+    <ProtectedRoute path="/photos" component={PhotosIndexContainer} />
+    <AuthRoute path="/login" component={SessionFormContainer} />
+    <AuthRoute path="/signup" component={SessionFormContainer} />
+  </div>
+);
+
+```
 
 ### Photos
 Photos are rendered through two different components, a `photos_index` to display photos through [React Masonry Component](https://github.com/eiriklv/react-masonry-component) and a `photo_show` that displays a single photo using a [React Modal](https://github.com/reactjs/react-modal). The photos are stored in the database side under the columns `id`, `title`, `body`, `image_url`, `user_id`, and `album_id`. An API call is made to that database that joins the user and photo under the `user_id` and the `current sessions` `id`. Filtering through the photos using this `id` populates the `user` page with their photos.
@@ -22,7 +43,35 @@ Photos are rendered through two different components, a `photos_index` to displa
 ### React Masonry
 Using the [React Masonry Component](https://github.com/eiriklv/react-masonry-component), photos are displayed as a responsive gallery that rearrange according to the size of the window. It also allows for endless scrolling for smooth viewing.
 
-<img src="./docs/screen_clippings/masonry_code.png" width="600">
+```ruby
+
+render(){
+  const {photos} = this.props;
+
+  return (
+
+    <div className="masonry">
+      <Masonry
+        className={'my-gallery-class'}
+        elementType={'ul'}
+        options={masonryOptions}
+        disableImagesLoaded={false}
+        updateOnEachImageLoad={false}
+        >
+        {photos.map( photo => (
+          <div  key={photo.id + "photo"}
+                className="single-photo" >
+            <Link to={`/photos/${photo.id}`}>
+              <img key={photo.id} src={ photo.image_url }/>
+            </Link>
+          </div>
+        ))}
+      </Masonry>
+    </div>
+  );
+}
+
+```
 
 ![alt text](./docs/screen_clippings/modal_moving.gif)
 
@@ -30,8 +79,16 @@ Using the [React Masonry Component](https://github.com/eiriklv/react-masonry-com
 ### React Modal
 Using the [React Modal](https://github.com/reactjs/react-modal), photos are displayed in a convenient pop-up that zooms in on the photo and dims the background.
 
-<img src="./docs/screen_clippings/modal-snippet.png" width="600">
+```ruby
 
+<Modal
+  isOpen={this.state.modalIsOpen}
+  onRequestClose={this.closeModal}
+  style={customStyles}
+  contentLabel="Example Modal">
+</Modal>
+
+```
 <img src="./docs/screen_clippings/modal.png" width="600">
 
 ### Cloudinary
@@ -43,6 +100,7 @@ Using the [React Modal](https://github.com/reactjs/react-modal), photos are disp
 
 ### Comments
 ```ruby
+
 render()
 {
   return(
@@ -75,6 +133,7 @@ render()
 
   );
 }
+
 ```
 Comments have three components to create, view, and delete them. Using React these containers can be called in a single form to display the components. Comments are stored in the database under a `comments` table and are joined to both `photos` and `users` through polymorphic associations. It contains the columns `body`, `user_id`, and `photo_id`. Through these associations `comments` can be accessed from `photos` without the need for a joins table.
 
