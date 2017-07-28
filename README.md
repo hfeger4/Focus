@@ -16,7 +16,7 @@ Using [React-Router](https://github.com/ReactTraining/react-router), Focus can u
 <img src="docs/screen_clippings/react_router.png" width="600">
 
 ### Photos
-Photos are rendered through two different components, a `photos_index` to display photos through [React Masonry Component](https://github.com/eiriklv/react-masonry-component) and a `photo_show` that displays a single photo using a [React Modal](https://github.com/reactjs/react-modal). The photos are stored in the database side under the columns `photo_url` and `user_id` and an API call is made to that database that joins the user and photo under the `user_id` and the current sessions `id`. Filtering through the photos using this id populates the user page with their photos.
+Photos are rendered through two different components, a `photos_index` to display photos through [React Masonry Component](https://github.com/eiriklv/react-masonry-component) and a `photo_show` that displays a single photo using a [React Modal](https://github.com/reactjs/react-modal). The photos are stored in the database side under the columns `id`, `title`, `body`, `image_url`, `user_id`, and `album_id`. An API call is made to that database that joins the user and photo under the `user_id` and the `current sessions` `id`. Filtering through the photos using this `id` populates the `user` page with their photos.
 
 
 ### React Masonry
@@ -35,7 +35,9 @@ Using the [React Modal](https://github.com/reactjs/react-modal), photos are disp
 <img src="./docs/screen_clippings/modal.png" width="600">
 
 ## Comments
-Comments are stored in the database under a `comments` table and are joined to both `photos` and `users` through polymorphic associations. It contains the columns `body`, `user_id`, and `photo_id`. Through these associations `comments` can be accessed from `photos` without the need for a joins table. 
+<img src="./docs/screen_clippings/comments_clear.png" width="600">
+Comments have 3 components to create, view, and delete them. Using React these containers can be called in a single form to display these components.
+Comments are stored in the database under a `comments` table and are joined to both `photos` and `users` through polymorphic associations. It contains the columns `body`, `user_id`, and `photo_id`. Through these associations `comments` can be accessed from `photos` without the need for a joins table.
 
 ## Future Direction for Project
 
