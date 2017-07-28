@@ -42,11 +42,43 @@ Using the [React Modal](https://github.com/reactjs/react-modal), photos are disp
 
 
 ### Comments
-<img src="./docs/screen_clippings/comments_clear.png" width="600">
+```ruby
+render()
+{
+  return(
 
+    <div className="comment-form">
+    <div>
+        <img src={this.props.photo.image_url}
+             className="comments-photo"></img>
+       <div className="tag-form">
+              <TagIndexContainer/>
+              {this.displayTags()}
+      </div>
+    </div>
+    <div className="photo-comments">
+      <div>
+          <div className="all-comments">
+             {this.props.comments.length > 0 ? this.props.comments.map((comment) => (
+               <CommentItem currentUser={this.props.currentUser}
+                            deleteComment={this.props.deleteComment}
+                            key={comment.id + "comment"}
+                            comment={comment} />)) : ("")}
+          </div>
+          <div>
+          <CommentCreateContainer photo={this.props.photo}
+                                  createComment={this.props.createComment}/>
+          </div>
+      </div>
+    </div>
+    </div>
+
+  );
+}
+```
 Comments have three components to create, view, and delete them. Using React these containers can be called in a single form to display the components. Comments are stored in the database under a `comments` table and are joined to both `photos` and `users` through polymorphic associations. It contains the columns `body`, `user_id`, and `photo_id`. Through these associations `comments` can be accessed from `photos` without the need for a joins table.
 
-Nesting comments under photos through the [Rails Jbuilder](https://github.com/rails/jbuilder) lead to difficult situations where grabbing specific comments could lead to problems. This was resolved by using the backend associations mentioned above. 
+Nesting comments under photos through the [Rails Jbuilder](https://github.com/rails/jbuilder) lead to difficult situations where grabbing specific comments could lead to undefined problems. This was resolved by using the backend associations mentioned above.
 
 
 ## Future Direction for Project
