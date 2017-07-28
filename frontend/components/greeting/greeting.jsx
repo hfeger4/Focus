@@ -28,7 +28,7 @@ const personalGreeting = (currentUser, logout) => (
     <h2></h2>
     <div className="login-signup">
       <Link to={`/users/${currentUser.id}/photos`} className="login-button">
-        <i className="fa fa-user fa-2x" aria-hidden="true"></i>Your Photos</Link>
+        <i className="fa fa-user fa-2x" aria-hidden="true"></i>&nbsp;Your Photos</Link>
       <Link to={`/users/${currentUser.id}/albums`}><i className="fa fa-window-restore fa-2x" aria-hidden="true"></i></Link>
       <Link className="login-button" to={`/users/${currentUser.id}/albums`}>Albums</Link>
       <Link className="login-button" to='/upload'>

@@ -42,7 +42,8 @@ class CommentForm extends React.Component{
 
       <div className="comment-form">
       <div>
-          <img src={this.props.photo.image_url} className="comments-photo"></img>
+          <img src={this.props.photo.image_url}
+               className="comments-photo"></img>
          <div className="tag-form">
                 <TagIndexContainer/>
                 {this.displayTags()}
@@ -52,10 +53,14 @@ class CommentForm extends React.Component{
         <div>
             <div className="all-comments">
                {this.props.comments.length > 0 ? this.props.comments.map((comment) => (
-                 <CommentItem currentUser={this.props.currentUser} deleteComment={this.props.deleteComment} key={comment.id + "comment"} comment={comment} />)) : ("")}
+                 <CommentItem currentUser={this.props.currentUser}
+                              deleteComment={this.props.deleteComment}
+                              key={comment.id + "comment"}
+                              comment={comment} />)) : ("")}
             </div>
             <div>
-            <CommentCreateContainer photo={this.props.photo} createComment={this.props.createComment}/>
+            <CommentCreateContainer photo={this.props.photo}
+                                    createComment={this.props.createComment}/>
             </div>
         </div>
       </div>
