@@ -24,11 +24,11 @@ Using the [React Masonry Component](https://github.com/eiriklv/react-masonry-com
 
 <img src="./docs/screen_clippings/masonry_code.png" width="600">
 
-<img src="./docs/screen_clippings/gallery.png" width="600">
+![alt text](./docs/screen_clippings/modal_moving.gif)
 
 
 ### React Modal
-Using the [React Modal](https://github.com/reactjs/react-modal), photos are displayed in a convenient pop-up that zooms in on the photo and blurs the background.
+Using the [React Modal](https://github.com/reactjs/react-modal), photos are displayed in a convenient pop-up that zooms in on the photo and dims the background.
 
 <img src="./docs/screen_clippings/modal-snippet.png" width="600">
 
