@@ -345,7 +345,7 @@ tag6 = Tag.create(name: "Cool")
 
 
 tagging1 = Tagging.create(photo_id: photo1.id, tag_id: tag1.id)
-(0..Photo.count-1).each do |photoId|
+(1..Photo.count-1).each do |photoId|
   random_tags = rand_tags.sample(2)
   random_tags.each do |tag|
     Tagging.create!(photo_id: photoId, tag_id: tag.id)
