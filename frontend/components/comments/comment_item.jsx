@@ -29,13 +29,15 @@ class CommentItem extends React.Component{
 
     return (
       <div className="comment-item">
-        <div>{this.props.comment.user_id}</div>
-      <div>{this.props.comment.body}</div>
+        <div className="individual-things">
+          <div>{this.props.comment.username}:</div>
+        <div>{this.props.comment.body}</div>
+        <div className="time">{this.props.comment.ago}&nbsp;ago</div>
+      </div>
       {myuser === commentuser ? (
         <button onClick={this.handleDelete}>&nbsp;<i className="fa fa-times" aria-hidden="true"></i>
         </button>
       ) : ""}
-
       </div>
 
     );

@@ -104,7 +104,13 @@ photo16 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/up
 #Tags
 t1 = Tag.create(name: "Awesome")
 t2 = Tag.create(name: "Funny")
-t2 = Tag.create(name: "Cute")
+t3 = Tag.create(name: "Cute")
+t4 = Tag.create(name: "Interesting")
+t5 = Tag.create(name: "Mind-Blowing")
+t6 = Tag.create(name: "Cool")
+
+tagging1 = Tagging.create(photo_id: photo1.id, tag_id: t1.id)
+
 
 
 #Albums

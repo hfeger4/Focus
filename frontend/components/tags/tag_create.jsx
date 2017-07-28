@@ -27,7 +27,6 @@ class TagCreate extends React.Component{
       this.props.createTag(this.state)
       .then(this.setState({name: ""}));
     }
-
   }
 
   render()

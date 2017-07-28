@@ -12,10 +12,10 @@ export const destroyTag = id => (
   })
 );
 
-export const createTag = comment => (
+export const createTag = tag => (
   $.ajax({
     method: 'POST',
     url: 'api/tags',
-    data: {comment}
+    data: {tag}
   })
 );
