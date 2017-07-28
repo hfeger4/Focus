@@ -11,13 +11,13 @@ Focus is a full-stack web application inspired by Flickr that utilizes:
 ### Photos
 Using the [React Masonry Component](https://github.com/eiriklv/react-masonry-component), photos are displayed as a responsive gallery that rearrange according to the size of the window.
 
-<img src="./docs/screen_clippings/masonry_code.png" width="200">
+<img src="./docs/screen_clippings/masonry_code.png" width="1000">
 
-<img src="./docs/screen_clippings/gallery.png" width="200">
+<img src="./docs/screen_clippings/gallery.png" width="1000">
 
 Using the [React Modal](https://github.com/reactjs/react-modal), photos are displayed in a convenient pop-up that zooms in on the photo.
 
-<img src="./docs/screen_clippings/modal.png" width="200">
+<img src="./docs/screen_clippings/modal.png" width="1000">
 
 ## Future Direction for Project
 
