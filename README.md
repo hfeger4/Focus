@@ -34,10 +34,20 @@ Using the [React Modal](https://github.com/reactjs/react-modal), photos are disp
 
 <img src="./docs/screen_clippings/modal.png" width="600">
 
-## Comments
+### Cloudinary
+[Cloudinary](http://cloudinary.com/) is a cloud based image and video management website. Cloudinary allows users to securely upload and view files on Focus.
+
+<img src="./docs/screen_clippings/cloudinary.png" width="600">
+
+
+
+### Comments
 <img src="./docs/screen_clippings/comments_clear.png" width="600">
 
 Comments have three components to create, view, and delete them. Using React these containers can be called in a single form to display the components. Comments are stored in the database under a `comments` table and are joined to both `photos` and `users` through polymorphic associations. It contains the columns `body`, `user_id`, and `photo_id`. Through these associations `comments` can be accessed from `photos` without the need for a joins table.
+
+Nesting comments under photos through the [Rails Jbuilder](https://github.com/rails/jbuilder) lead to difficult situations where grabbing specific comments could lead to problems. This was resolved by using the backend associations mentioned above. 
+
 
 ## Future Direction for Project
 
