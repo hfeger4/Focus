@@ -88,53 +88,271 @@ photo13 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/up
 photo14 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501139232/butterfly-wings-red-flowers-66871_xcavic.jpg",
                     user_id: 1,
                     title: "Butterfly",
-                    body: "Another day another flower",
-                    album_id: 1)
+                    body: "Another day another flower")
 photo15 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501139230/pexels-photo-493774_yajklx.jpg",
                     user_id: 1,
                     title: "Arctic Dog",
-                    body: "Looking comfortable in his big jacket.",
-                    album_id: 1)
+                    body: "Looking comfortable in his big jacket."
+                    )
 photo16 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501139234/pexels-photo-163990_nvkza9.jpg",
                     user_id: 1,
                     title: "Light Up Bridge",
-                    body: "They say this bridge can be seen from space.",
-                    album_id: 1)
-photo17 = Photo.create(image_url: "",
+                    body: "They say this bridge can be seen from space."
+                    )
+photo17 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242367/pexels-photo-414825_jvex1r.jpg",
                     user_id: 1,
-                    title: "Delicious Dish",
-                    body: "Delicious dish prepared for you.")
-photo18 = Photo.create(image_url: "",
+                    title: "Gaming Laptops",
+                    body: "I'm pretty sure that's not how it works.")
+photo18 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242369/pexels-photo-526421_ukgpuv.jpg",
                     user_id: 1,
-                    title: "Cool Guy",
-                    body: "Someone has to take a picture of the photographer.",
-                    album_id: 1)
-photo19 = Photo.create(image_url: "",
+                    title: "Church",
+                    body: "This is one beautiful church."
+                    )
+photo19 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242370/pexels-photo-538626_l0mmus.jpg
+",
                     user_id: 1,
-                    title: "Butterfly",
-                    body: "Another day another flower",
-                    album_id: 1)
-photo20 = Photo.create(image_url: "",
+                    title: "Sorted Ingredients",
+                    body: "Spices and ingredients for dinner.",
+                    album_id: 4)
+photo20 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242368/pexels-photo-538509_hzfwb4.jpg
+",
                     user_id: 1,
-                    title: "Arctic Dog",
-                    body: "Looking comfortable in his big jacket.",
-                    album_id: 1)
-photo21 = Photo.create(image_url: "",
+                    title: "Reflection",
+                    body: "A cool view of the lake.",
+                    album_id: 4)
+photo21 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1501242361/pexels-photo-476313_l1s2up.jpg
+",
                     user_id: 1,
-                    title: "Light Up Bridge",
-                    body: "They say this bridge can be seen from space.",
-                    album_id: 1)
+                    title: "Sunrise",
+                    body: "I always enjoy some yoga on the lake before sunrise."
+                    )
+photo22 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242362/pexels-photo-534455_rx1d5l.jpg
+",
+                    user_id: 1,
+                    title: "Vacation Home",
+                    body: "This was my 2017 vaca!")
+photo23 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242363/pexels-photo-372959_w3qcka.jpg
+",
+                     user_id: 1,
+                     title: "Saturday Nights",
+                     body: "Just my average saturday.")
+photo24 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242367/pexels-photo-414544_ysghnx.jpg
+",
+                     user_id: 1,
+                     title: "Cool Garden",
+                     body: "Decided to make my garden prettier.")
+photo25 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242365/pexels-photo-459735_uwrdxq.jpg
+",
+                      user_id: 1,
+                      title: "Other Half",
+                      body: "Now you know who was taking a picture of the cool guy.")
+photo26 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242367/pexels-photo-538628_lzg9ut.jpg
+",
+                      user_id: 1,
+                      title: "Tired Kitten",
+                      body: "He isn't allowed on the bed but I can't say no!",
+                      )
+photo27 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242370/night-85029_uvbe0f.jpg
+",
+                      user_id: 1,
+                      title: "Classy",
+                      body: ""
+                      )
+photo23 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242370/butterflies-insect-bezkregowiec-macro-70850_oxjcbx.jpg
+",
+                     user_id: 1,
+                     title: "Silver Butterfly",
+                     body: "This is a shiny Butterfree.")
+photo24 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242370/parachute-paratrooper-parachutist-land-67298_uxw8ne.jpg
+
+",
+                     user_id: 1,
+                     title: "Trooper",
+                     body: "")
+photo25 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244212/pexels-photo-266497_y75s2s.jpg
+
+",
+                      user_id: 1,
+                      title: "Fireworks",
+                      body: "4th of July celebration!")
+photo26 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244212/pexels-photo-533319_ms9w55.jpg
+
+",
+                      user_id: 1,
+                      title: "Cherry Diet Coke",
+                      body: "",
+                      )
+photo27 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244213/pexels-photo-415233_hrzvsf.jpg
+
+",
+                      user_id: 1,
+                      title: "Snowstorm",
+                      body: ""
+                      )
+photo28 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244213/pexels-photo-506908_tta3hj.jpg
+
+",
+                     user_id: 2,
+                     title: "Monkey",
+                     body: "His fauxhawk is natural.")
+photo29 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244674/pexels-photo-371878_mtjux8.jpg
+",
+                     user_id: 2,
+                     title: "Lights",
+                     body: "")
+photo30 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244672/snow-snow-heart-heart-winter-159829_yahrzq.jpg
+
+",
+                      user_id: 2,
+                      title: "Snow Heart",
+                      body: "Just a couple of HighSchool sweethearts.")
+photo31 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244675/flying-scotsman-square-73444_zx4tgv.jpg
+
+",
+                      user_id: 2,
+                      title: "Train",
+                      body: "This train is only allowed to go 87 mph.",
+                      )
+photo32 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244671/pexels-photo-473083_sambon.jpg
+
+",
+                      user_id: 2,
+                      title: "Grasping for Sunrise",
+                      body: ""
+                      )
+photo33 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244671/pexels-photo-235941_f1iuji.jpg
+
+",
+                   user_id: 2,
+                   title: "Wedding Gift",
+                   body: "")
+photo34 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244670/pexels-photo-257554_y7vbq2.jpg
+
+",
+                    user_id: 2,
+                    title: "SpiderBro",
+                    body: "He eats the bugs in your house, be kind.")
+photo35 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244675/pexels-photo-493743_buji6z.jpg
+
+",
+                    user_id: 2,
+                    title: "New additions to Bart.",
+                    body: "",
+                    )
+photo36 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244672/pexels-photo-468908_i46c3d.jpg
+
+",
+                    user_id: 2,
+                    title: "Lost",
+                    body: ""
+                    )
+photo37 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244673/tunnel-arch-bricks-military-fort-161759_kz0sgf.jpg
+
+",
+                    user_id: 2,
+                    title: "Tunnel Arch",
+                    body: "")
+photo38 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244675/pexels-photo-260697_gmxnbo.jpg
+
+",
+                    user_id: 2,
+                    title: "Huddle",
+                    body: "",
+                    )
+photo39 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244677/pexels-photo-466617_hvhjoa.jpg
+
+",
+                    user_id: 2,
+                    title: "Waterfall",
+                    body: "Definitely on my list of places to visit."
+                    )
+photo40 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244676/pexels-photo-500738_xhifco.jpg
+
+",
+                    user_id: 2,
+                    title: "Stern Guy",
+                    body: "")
+photo41 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501244677/pexels-photo-434497_tmeops.jpg
+
+",
+                    user_id: 2,
+                    title: "",
+                    body: "",
+                    )
+photo42 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245349/pexels-photo-260024_qwgebx.jpg
+
+",
+                    user_id: 2,
+                    title: "Dream Big",
+                    body: ""
+                    )
+photo43 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245350/pexels-photo-461063_nwfw6g.jpg
+
+
+",
+                    user_id: 2,
+                    title: "",
+                    body: ""
+                    )
+photo44 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245350/pexels-photo-530869_qpuraa.jpg
+
+
+",
+                    user_id: 2,
+                    title: "",
+                    body: "")
+photo45 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245350/pexels-photo-486123_dvn93s.jpg
+
+
+",
+                    user_id: 2,
+                    title: "",
+                    body: "",
+                    )
+photo46 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245349/pexels-photo-530858_m4wsxo.jpg
+
+",
+                    user_id: 2,
+                    title: "",
+                    body: ""
+)
+photo47 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245349/pexels-photo-482007_sniwt1.jpg
+
+
+",
+                user_id: 2,
+                title: "",
+                body: ""
+                )
+photo48 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501245350/mario-luigi-yoschi-figures-163036_dvlrum.jpg
+
+
+",
+                user_id: 2,
+                title: "Heroes",
+                body: "The princess must be in another castle.")
+
+
 
 #Tags
-t1 = Tag.create(name: "Awesome")
-t2 = Tag.create(name: "Funny")
-t3 = Tag.create(name: "Cute")
-t4 = Tag.create(name: "Interesting")
-t5 = Tag.create(name: "Mind-Blowing")
-t6 = Tag.create(name: "Cool")
 
-tagging1 = Tagging.create(photo_id: photo1.id, tag_id: t1.id)
+rand_tags = [
+tag1 = Tag.create(name: "Awesome"),
+tag2 = Tag.create(name: "Incredible"),
+tag3 = Tag.create(name: "Cute"),
+tag4 = Tag.create(name: "Interesting"),
+tag5 = Tag.create(name: "Mind-Blowing"),
+tag6 = Tag.create(name: "Cool")
+]
 
+
+tagging1 = Tagging.create(photo_id: photo1.id, tag_id: tag1.id)
+(0..Photo.count).each do |photoId|
+  random_tags = rand_tags.sample(2)
+  random_tags.each do |tag|
+    Tagging.create!(photo_id: photoId, tag_id: tag.id)
+  end
+end
 
 
 #Albums
@@ -160,32 +378,35 @@ album5 = Album.create(
         user_id: 2)
 
 #Comments
-comment1 = Comment.create(
-        body: "Woah, cool photo!",
-        user_id: 1,
-        photo_id: 1)
 comment2 = Comment.create(
-        body: "Nice",
+        body: "Beautiful Fish",
         user_id: 2,
         photo_id: 1)
-comment3 = Comment.create(
-        body: "hello there!",
-        user_id: 2,
-        photo_id: 1)
-comment4 = Comment.create(
-        body: "Pretty interesting photo",
-        user_id: 2,
-        photo_id: 2)
-comment5 = Comment.create(
-        body: "This one sure is interesting",
-        user_id: 1,
-        photo_id: 3)
 
-rand_comments = ["Amazing!", "This looks soo good!", "I like it.", "Very nice.", "Cool picture!", "I've always wanted to see this.", "This is terrific", "Oh, I've always wanted one!"]
 
-(1..Photo.length).each do |photo_id|
-  random_comments = rand_comments.sample(3)
-  user_nums = (1..User.all.length).to_a
+rand_comments = ["Amazing!", "This looks soo good!", "I like it.", "Very nice.", "Cool picture!", "I've always wanted to see this.", "This is terrific", "Do you know where this is?"]
+
+(2..Photo.count).each do |photo_id|
+  random_comments = rand_comments.sample(1)
+  user_nums = (1..User.all.count).to_a
+  user_id = user_nums.sample
+  random_comments.each do |comment|
+    Comment.create!(body: comment, user_id: user_id, photo_id: photo_id)
+  end
+end
+
+(1..Photo.count).each do |photo_id|
+  random_comments = rand_comments.sample(1)
+  user_nums = (1..User.all.count).to_a
+  user_id = user_nums.sample
+  random_comments.each do |comment|
+    Comment.create!(body: comment, user_id: user_id, photo_id: photo_id)
+  end
+end
+
+(1..Photo.count).each do |photo_id|
+  random_comments = rand_comments.sample(1)
+  user_nums = (1..User.all.count).to_a
   user_id = user_nums.sample
   random_comments.each do |comment|
     Comment.create!(body: comment, user_id: user_id, photo_id: photo_id)
