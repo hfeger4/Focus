@@ -120,7 +120,7 @@ photo20 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/up
                     title: "Reflection",
                     body: "A cool view of the lake.",
                     album_id: 4)
-photo21 = Photo.create(image_url: "http://res.cloudinary.com/ds7hk07wv/image/upload/v1501242361/pexels-photo-476313_l1s2up.jpg
+photo21 = Photo.create(image_url: "https://res.cloudinary.com/ds7hk07wv/image/upload/v1501242361/pexels-photo-476313_l1s2up.jpg
 ",
                     user_id: 1,
                     title: "Sunrise",
