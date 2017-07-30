@@ -130,7 +130,7 @@ class PhotoShow extends React.Component{
                   </form>
                 ) : (<div></div>) }
                 </div>
-                <button className="submit-button"><Link to={`/comments/${id}`}>Comments Page</Link></button>
+                <Link to={`/comments/${id}`}><button className="submit-button" type="button">Comments Page</button></Link>
                 {photo.user_id === this.props.currentUser.id ? (
                   <button className="submit-button"
                     type="button"
