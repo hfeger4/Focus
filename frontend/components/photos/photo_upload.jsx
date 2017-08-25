@@ -103,7 +103,10 @@ class PhotoUpload extends React.Component{
             </button>
           </div>
           {this.state.image_url !== "" ? (
-            <div className="upload-check">Photo Added<i className="fa fa-check" aria-hidden="true"></i></div>) : <div className="upload-check">No Image</div>
+            <div className="upload-check">Photo Added<i
+                 className="fa fa-check"
+                 aria-hidden="true"></i></div>) : <div
+                 className="upload-check">No Image</div>
           }
 
           <br/>

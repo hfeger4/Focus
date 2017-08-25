@@ -122,7 +122,9 @@ class PhotoShow extends React.Component{
                {photo.user_id === this.props.currentUser.id ? (
                   <form onSubmit={this.handleSubmit}>
 
-                  <select className="dropdown" value={this.state.album_id} onChange={this.handleChange}>
+                  <select className="dropdown"
+                          value={this.state.album_id}
+                          onChange={this.handleChange}>
                     <option> Select Album </option>
                     {this.handleListAlbums()}
                   </select>
@@ -130,12 +132,14 @@ class PhotoShow extends React.Component{
                   </form>
                 ) : (<div></div>) }
                 </div>
-                <Link to={`/comments/${id}`}><button className="submit-button" type="button">Comments Page</button></Link>
+                <Link to={`/comments/${id}`}><button
+                      className="submit-button"
+                      type="button">Comments Page</button></Link>
                 {photo.user_id === this.props.currentUser.id ? (
                   <button className="submit-button"
-                    type="button"
-                    onClick={this.handleDelete}>
-                    Delete
+                          type="button"
+                          onClick={this.handleDelete}>
+                          Delete
                   </button>
                 ) : <div></div>}
               </div>

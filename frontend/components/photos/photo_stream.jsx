@@ -32,7 +32,8 @@ class PhotoStream extends React.Component{
           updateOnEachImageLoad={false}
           >
           {photos.map( photo => (
-            <div  key={photo.id + "photo"} className="single-photo" >
+            <div  key={photo.id + "photo"}
+                  className="single-photo" >
               <Link to={`/photos/${photo.id}`}>
                 <img key={photo.id} src={ photo.image_url }/>
               </Link>
