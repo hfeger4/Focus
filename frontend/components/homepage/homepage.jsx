@@ -56,7 +56,9 @@ class Homepage extends React.Component{
             </a>
           </div>
           <div className="footer-icons">
+            <a target="_blank" href="http://linkedin.com/in/howardfeger4">
             <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
         </div>
