@@ -30,7 +30,8 @@ const personalGreeting = (currentUser, logout) => (
       <Link to={`/users/${currentUser.id}/photos`} className="login-button">
         <i className="fa fa-user fa-2x" aria-hidden="true"></i>&nbsp;Your Photos</Link>
       <Link to={`/users/${currentUser.id}/albums`}><i className="fa fa-window-restore fa-2x" aria-hidden="true"></i></Link>
-      <Link className="login-button" to={`/users/${currentUser.id}/albums`}>Albums</Link>
+      <Link className="login-button" to={`/users/${currentUser.id}/albums`}>
+        <i className="fa fa-users fa-2x" aria-hidden="true"></i>&nbsp;Albums</Link>
       <Link className="login-button" to='/upload'>
         <i className="fa fa-cloud-upload fa-2x" aria-hidden="true"></i>
         &nbsp;Upload
