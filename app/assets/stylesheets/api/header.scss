@@ -44,9 +44,9 @@ font-weight:bold;
   color: rgba(255, 255, 255, 1)
 }
 
-// .login-button:hover{
-//   color: gray;
-// }
+.login-button:hover{
+  color: #DCDCDC;
+}
 
 .sign-up-button {
   padding: 5px;
@@ -86,6 +86,10 @@ font-weight:bold;
   padding: 20px;
   margin: 5px;
   color: rgba(255, 255, 255, 1)
+}
+
+.explore-button:hover{
+  color: #DCDCDC;
 }
 
 .homepage-container{
