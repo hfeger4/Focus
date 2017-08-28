@@ -109,7 +109,7 @@ class PhotoShow extends React.Component{
         contentLabel="Example Modal">
         <div className="entire-photo">
             <div className="whole-photo-modal">
-              <h1>{title}</h1>
+              <h1 className="title-show">{title}</h1>
               <div className="photo-modal">
                 <img src={ photo.image_url }/>
               </div>
