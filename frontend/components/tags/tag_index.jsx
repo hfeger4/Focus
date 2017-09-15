@@ -50,7 +50,7 @@ class TagIndex extends React.Component{
                   value={this.state.name}
                   placeholder=" Add a unique tag">
           </input>
-          <input type="submit" value=""></input>
+          <input className="enter-bar" type="submit" value="Enter"></input>
         </form>
       </div>
 
