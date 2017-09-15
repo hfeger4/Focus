@@ -5,11 +5,13 @@
 .tag-form{
   color: white;
   background-color: rgba(0, 0, 0, .2)
-
 }
 
 .add-tag-bar{
+  color: black;
   display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, .4)
+  justify-content: space-between;
+  // background-color: rgba(0, 0, 0, .4);
+  background-color: white;
+  height: 40px;
 }
