@@ -38,11 +38,11 @@ class CommentCreate extends React.Component{
       <form onSubmit={this.handleSubmit}>
       <input className="text-area"
         type="text"
-        placeholder="Add a comment"
+        placeholder=" Add a comment"
         value={this.state.body}
         onChange={this.update('body')}
         />
-      <input className="new-comment-s" type='submit' value="New Comment  "/>
+      <input className="new-comment-s" type='submit' value="Enter  "/>
       </form>
     );
   }

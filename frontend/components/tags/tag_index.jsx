@@ -48,9 +48,9 @@ class TagIndex extends React.Component{
           <input type="text"
                   onChange={this.update("name")}
                   value={this.state.name}
-                  placeholder="Add a unique tag">
+                  placeholder=" Add a unique tag">
           </input>
-          <input type="submit" value="Add Tag"></input>
+          <input type="submit" value=""></input>
         </form>
       </div>
 
