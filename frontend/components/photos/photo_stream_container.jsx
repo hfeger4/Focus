@@ -5,7 +5,6 @@ import PhotoStream from './photo_stream';
 
 const mapStateToProps =  (state) => {
   return {photos: selectAllPhotos(state)};
-
 };
 
 const mapDispatchToProps = dispatch => ({
