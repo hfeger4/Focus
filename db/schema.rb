@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170727211021) do
   enable_extension "plpgsql"
 
   create_table "albums", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",      null: false
     t.string   "body"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -44,14 +44,14 @@ ActiveRecord::Schema.define(version: 20170727211021) do
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "photo_id"
+    t.integer  "tag_id",     null: false
+    t.integer  "photo_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
