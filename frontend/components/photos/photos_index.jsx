@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import Masonry from 'react-masonry-component';
+import { RingLoader } from 'react-spinners';
 
 const masonryOptions = {
   // fitWidth: true,
@@ -13,10 +14,13 @@ const masonryOptions = {
 class PhotosIndex extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      loading: true
+    };
   }
 
-  componentWillMount() {
-    this.props.fetchPhotos();
+  componentDidMount() {
+    this.props.fetchPhotos().then( () => this.setState({ loading: false }));
   }
 
   render(){
@@ -24,6 +28,13 @@ class PhotosIndex extends React.Component{
 
     return (
       <div>
+        <div className='sweet-loading'>
+          <RingLoader
+            size={150}
+            color={'#123abc'}
+            loading={this.state.loading}
+          />
+        </div>
         <h1 className="explore_title">Explore</h1>
         <div className="masonry">
           <Masonry

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import Masonry from 'react-masonry-component';
+import { RingLoader } from 'react-spinners';
 
 const masonryOptions = {
   // fitWidth: true,
@@ -13,17 +14,27 @@ const masonryOptions = {
 class PhotoStream extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      loading: true
+    };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { match, fetchUserPhotos } = this.props;
-    this.props.fetchUserPhotos(match.params.userId);
+    this.props.fetchUserPhotos(match.params.userId).then( () => this.setState({ loading: false }));
   }
 
   render(){
     const {photos} = this.props;
     return (
       <div>
+        <div className='sweet-loading'>
+          <RingLoader
+            size={150}
+            color={'#123abc'}
+            loading={this.state.loading}
+          />
+        </div>
         <h1 className="explore_title">Your Photos</h1>
         <div className="masonry">
           <Masonry
