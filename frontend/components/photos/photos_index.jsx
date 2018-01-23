@@ -5,10 +5,7 @@ import Masonry from 'react-masonry-component';
 import { RingLoader } from 'react-spinners';
 
 const masonryOptions = {
-  // fitWidth: true,
-  // stagger: 100,
   gutter: 3,
-  // transitionDuration: '0.8s',
   transitionDuration: 0 };
 
 class PhotosIndex extends React.Component{
@@ -20,7 +17,8 @@ class PhotosIndex extends React.Component{
   }
 
   componentDidMount() {
-    this.props.fetchPhotos().then( () => this.setState({ loading: false }));
+    this.props.fetchPhotos().then( () =>
+      this.setState({ loading: false }));
   }
 
   render(){

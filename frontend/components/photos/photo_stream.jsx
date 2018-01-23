@@ -21,7 +21,8 @@ class PhotoStream extends React.Component{
 
   componentDidMount() {
     const { match, fetchUserPhotos } = this.props;
-    this.props.fetchUserPhotos(match.params.userId).then( () => this.setState({ loading: false }));
+    this.props.fetchUserPhotos(match.params.userId).then( () =>
+      this.setState({ loading: false }));
   }
 
   render(){
