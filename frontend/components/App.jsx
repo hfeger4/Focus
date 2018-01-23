@@ -24,7 +24,7 @@ import CommentFormContainer from './comments/comment_form_container';
 
 const App = () => (
   <div className="main-body">
-    <header>
+    <header className="header-background">
       <GreetingContainer />
     </header>
 
