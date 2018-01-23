@@ -5,9 +5,10 @@ import Masonry from 'react-masonry-component';
 
 const masonryOptions = {
   // fitWidth: true,
-  stagger: 100,
+  // stagger: 100,
   gutter: 3,
-  transitionDuration: '0.8s' };
+  // transitionDuration: '0.8s',
+  transitionDuration: 0 };
 
 class PhotoStream extends React.Component{
   constructor(props){
@@ -22,24 +23,26 @@ class PhotoStream extends React.Component{
   render(){
     const {photos} = this.props;
     return (
-
-      <div className="masonry">
-        <Masonry
-          className={'my-gallery-class'}
-          elementType={'ul'}
-          options={masonryOptions}
-          disableImagesLoaded={false}
-          updateOnEachImageLoad={false}
-          >
-          {photos.map( photo => (
-            <div  key={photo.id + "photo"}
-                  className="single-photo" >
-              <Link to={`/photos/${photo.id}`}>
-                <img key={photo.id} src={ photo.image_url }/>
-              </Link>
-            </div>
-          ))}
-        </Masonry>
+      <div>
+        <h1 className="explore_title">Your Photos</h1>
+        <div className="masonry">
+          <Masonry
+            className={'my-gallery-class'}
+            elementType={'ul'}
+            options={masonryOptions}
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={false}
+            >
+            {photos.map( photo => (
+              <div  key={photo.id + "photo"}
+                    className="single-photo" >
+                <Link to={`/photos/${photo.id}`}>
+                  <img key={photo.id} src={ photo.image_url }/>
+                </Link>
+              </div>
+            ))}
+          </Masonry>
+        </div>
       </div>
     );
   }
